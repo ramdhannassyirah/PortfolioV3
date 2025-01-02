@@ -1,10 +1,11 @@
-<script setup></script>
-
 <template>
   <div class="space-y-4">
-    <h1 class="text-3xl font-bold">Hi, I'm a Software Engineer</h1>
+    <h1 class="text-3xl font-bold">
+      Hi, I'm
+      <span class="text-run"> Software Engineer </span>
+    </h1>
     <ul class="flex gap-2 flex-row lg:gap-4 items-center lg:ml-0">
-      <li class="flex items-center gap-3 bg-neutral-100 px-4 rounded-full w-fit">
+      <li class="flex items-center gap-3 bg-slate-100 px-4 rounded-full w-fit">
         Remote worker
         <span class="relative flex h-3 w-3">
           <span
@@ -13,7 +14,7 @@
           <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
         </span>
       </li>
-      <li class="bg-neutral-100 px-4 rounded-full w-fit">
+      <li class="bg-slate-100 px-4 rounded-full w-fit">
         Based in Cianjur <span class="ml-1">🇮🇩</span>
       </li>
     </ul>
@@ -43,10 +44,35 @@
           <rect x="2" y="16" width="6" height="6" rx="1" />
           <rect x="9" y="2" width="6" height="6" rx="1" />
           <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
-          <path d="M12 12V8" /></svg
-        >Services
+          <path d="M12 12V8" />
+        </svg>
+        Services
       </h1>
       <p>I can deliver the following services</p>
     </section>
   </div>
 </template>
+
+<script setup>
+import { gsap } from 'gsap'
+import { TextPlugin } from 'gsap/TextPlugin'
+import { onMounted } from 'vue'
+
+gsap.registerPlugin(TextPlugin)
+
+onMounted(() => {
+  // Animasi teks untuk memberi kesan mengetik
+  gsap.to('.text-run', {
+    repeat: -1,
+    repeatDelay: 1,
+    duration: 2.5, // Durasi animasi (sesuaikan dengan kebutuhan)
+    text: {
+      value: 'Ramdhan Nassyirah',
+      delimiter: '',
+      ease: 'none',
+    },
+
+    yoyo: true,
+  })
+})
+</script>

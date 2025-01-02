@@ -1,11 +1,11 @@
 <template>
   <aside>
-    <div class="min-h-screen w-60 border-r p-4">
+    <div class="h-full w-60 border-r p-4">
       <div class="flex flex-col gap-3">
         <RouterLink
           to="/"
           class="items-center px-2 rounded-md py-2 gap-2 flex"
-          :class="{ 'bg-slate-50': $route.path === '/' }"
+          :class="{ 'bg-slate-100': $route.path === '/' }"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -25,7 +25,7 @@
           >Home</RouterLink
         >
         <RouterLink
-          active-class="bg-slate-50"
+          active-class="bg-slate-100"
           class="items-center px-2 rounded-md py-2 gap-2 flex"
           to="/about"
           ><svg
@@ -50,7 +50,7 @@
           >About</RouterLink
         >
         <RouterLink
-          active-class="bg-slate-50"
+          active-class="bg-slate-100"
           class="items-center px-2 rounded-md py-2 gap-2 flex"
           to="/projects"
           ><svg
@@ -73,7 +73,7 @@
           Projects</RouterLink
         >
         <RouterLink
-          active-class="bg-slate-50"
+          active-class="bg-slate-100"
           class="items-center px-2 rounded-md py-2 gap-2 flex"
           to="/contact"
           ><svg

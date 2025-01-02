@@ -34,7 +34,7 @@
       <!-- Social Media for Desktop -->
       <div class="lg:flex items-center gap-4 hidden">
         <div
-          class="w-10 h-10 bg-slate-50 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
+          class="w-10 h-10 bg-slate-100 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
         >
           <a href="https://github.com/ramdhannassyirah" target="_blank" rel="noopener noreferrer">
             <svg
@@ -57,7 +57,7 @@
           </a>
         </div>
         <div
-          class="w-10 h-10 bg-slate-50 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
+          class="w-10 h-10 bg-slate-100 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
         >
           <a
             href="http://www.instagram.com/ramdhannassyirah"
@@ -83,7 +83,7 @@
           </a>
         </div>
         <div
-          class="w-10 h-10 bg-slate-50 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
+          class="w-10 h-10 bg-slate-100 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
         >
           <a
             href="https://id.linkedin.com/in/ramdhannassyirah"
@@ -140,8 +140,8 @@
       <div class="flex flex-col gap-3 p-4">
         <RouterLink
           to="/"
-          active-class="bg-slate-50"
           class="items-center px-2 rounded-md py-2 gap-2 flex"
+          :class="{ 'bg-slate-100': $route.path === '/' }"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -161,7 +161,7 @@
           >Home</RouterLink
         >
         <RouterLink
-          active-class="bg-slate-50"
+          active-class="bg-slate-100"
           class="items-center px-2 rounded-md py-2 gap-2 flex"
           to="/about"
           ><svg
@@ -186,7 +186,7 @@
           >About</RouterLink
         >
         <RouterLink
-          active-class="bg-slate-50"
+          active-class="bg-slate-100"
           class="items-center px-2 rounded-md py-2 gap-2 flex"
           to="/projects"
           ><svg
@@ -209,7 +209,7 @@
           Projects</RouterLink
         >
         <RouterLink
-          active-class="bg-slate-50"
+          active-class="bg-slate-100"
           class="items-center px-2 rounded-md py-2 gap-2 flex"
           to="/contact"
           ><svg
@@ -234,7 +234,7 @@
       </div>
       <div class="flex p-4 items-center justify-end gap-4">
         <div
-          class="w-10 h-10 bg-slate-50 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
+          class="w-10 h-10 bg-slate-100 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
         >
           <a href="https://github.com/ramdhannassyirah" target="_blank" rel="noopener noreferrer">
             <svg
@@ -257,7 +257,7 @@
           </a>
         </div>
         <div
-          class="w-10 h-10 bg-slate-50 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
+          class="w-10 h-10 bg-slate-100 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
         >
           <a
             href="http://www.instagram.com/ramdhannassyirah"
@@ -283,7 +283,7 @@
           </a>
         </div>
         <div
-          class="w-10 h-10 bg-slate-50 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
+          class="w-10 h-10 bg-slate-100 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
         >
           <a
             href="https://id.linkedin.com/in/ramdhannassyirah"
