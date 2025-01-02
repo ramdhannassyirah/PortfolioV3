@@ -55,6 +55,7 @@
       <div class="flex flex-col gap-2 lg:flex-row justify-between w-full">
         <p>My professional career journey</p>
         <button
+          @click="downloadResume"
           class="flex items-center gap-2 text-neutral-600 transition-all duration-300 hover:text-neutral-700"
         >
           <div
@@ -113,8 +114,10 @@
 
 <script setup>
 import BoardSkills from '@/components/BoardSkills.vue'
-</script>
 
-<style>
-/***** Add additional global or scoped styles here if needed *****/
-</style>
+const downloadResume = () => {
+  const resumeUrl = 'https://drive.google.com/file/d/1_CTNU4KL5zDVXHjHWyTu708YkAOyXexH/view'
+
+  window.open(resumeUrl, '_blank')
+}
+</script>
