@@ -1,3 +1,8 @@
+<script setup>
+defineProps({
+  item: Object,
+})
+</script>
 <template>
   <div
     class="max-w-md border rounded-lg cursor-pointer hover:scale-105 transition-all duration-300 overflow-hidden shadow-md bg-white"
@@ -45,9 +50,9 @@
       </div>
     </div>
     <div class="p-4">
-      <h1 class="text-lg font-semibold text-gray-800">Website Development</h1>
+      <h1 class="text-lg font-semibold text-gray-800">{{ item.title }}</h1>
       <p class="mt-2 text-sm text-gray-600">
-        Create stunning, user-friendly fullstack web applications using modern technologies.
+        {{ item.description }}
       </p>
     </div>
   </div>
