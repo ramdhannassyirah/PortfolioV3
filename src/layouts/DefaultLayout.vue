@@ -4,7 +4,7 @@
   </header>
   <main class="flex w-full gap-4">
     <SideBar class="hidden lg:block" />
-    <div class="px-4 lg:px-0 py-8 max-w-3xl mx-auto">
+    <div class="px-4 lg:px-0 py-8 max-w-3xl overflow-hidden mx-auto">
       <RouterView></RouterView>
     </div>
   </main>

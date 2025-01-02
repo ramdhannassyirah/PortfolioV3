@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-4">
+  <div class="space-y-4 md:px-4">
     <h1 class="text-lg font-semibold">
       Hi, I'm <br />
       <span class="text-run text-3xl font-bold"> Software Engineer </span>
