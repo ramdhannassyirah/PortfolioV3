@@ -100,6 +100,5 @@
   </aside>
 </template>
 <script setup>
-import router from '@/router'
 import { RouterLink } from 'vue-router'
 </script>
