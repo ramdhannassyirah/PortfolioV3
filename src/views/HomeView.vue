@@ -2,9 +2,9 @@
 
 <template>
   <div class="space-y-4">
-    <h1 class="text-3xl font-bold text-center lg:text-left">Hi, I'm a Software Engineer</h1>
-    <ul class="flex flex-col gap-2 lg:flex-row lg:gap-4 lg:ml-0">
-      <li class="flex items-center gap-3 bg-neutral-200 px-4 rounded-full">
+    <h1 class="text-3xl font-bold">Hi, I'm a Software Engineer</h1>
+    <ul class="flex gap-2 flex-row lg:gap-4 items-center lg:ml-0">
+      <li class="flex items-center gap-3 bg-neutral-100 px-4 rounded-full w-fit">
         Remote worker
         <span class="relative flex h-3 w-3">
           <span
@@ -13,7 +13,7 @@
           <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
         </span>
       </li>
-      <li class="bg-neutral-200 px-4 rounded-full">
+      <li class="bg-neutral-100 px-4 rounded-full w-fit">
         Based in Cianjur <span class="ml-1">🇮🇩</span>
       </li>
     </ul>

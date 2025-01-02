@@ -1,9 +1,9 @@
 <template>
-  <div class="about px-4">
-    <h1 class="text-3xl font-semibold text-center lg:text-left">About</h1>
-    <p class="border-b-2 mb-4 py-4 text-center lg:text-left text-gray-600">A short story of me</p>
+  <div class="about md:px-4">
+    <h1 class="text-3xl font-semibold">About</h1>
+    <p class="border-b-2 mb-4 py-4 text-gray-600">A short story of me</p>
 
-    <section class="flex flex-col items-center lg:items-start">
+    <section class="flex flex-col w-full">
       <div class="purse space-y-4 text-justify max-w-3xl">
         <p>
           Hai! I'm Ramdhan Nassyirah, an experienced software engineer with a deep passion for
@@ -31,12 +31,12 @@
       </div>
     </section>
 
-    <section class="flex flex-col items-center gap-2 lg:items-start border-t-2 my-4 py-4">
-      <h1 class="text-xl font-medium text-center flex items-center gap-2 lg:text-left">
+    <section class="flex flex-col gap-1 border-t-2 my-4 py-4">
+      <h1 class="text-xl font-medium flex items-center gap-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="26"
-          height="26"
+          width="20"
+          height="20"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -52,33 +52,35 @@
         </svg>
         Career
       </h1>
-      <div class="flex flex-col lg:flex-row justify-between w-full items-center">
+      <div class="flex flex-col lg:flex-row justify-between w-full">
         <p>My professional career journey</p>
-        <button class="text-blue-600 hover:underline">Download Resume</button>
+        <button class="text-blue-600 hover:underline w-fit">Download Resume</button>
       </div>
     </section>
 
-    <section class="flex flex-col items-center gap-4 lg:items-start border-y-2 mt-4 py-4">
-      <h1 class="text-xl font-medium text-center flex items-center gap-2 lg:text-left">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="26"
-          height="26"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-code-xml"
-        >
-          <path d="m18 16 4-4-4-4" />
-          <path d="m6 8-4 4 4 4" />
-          <path d="m14.5 4-5 16" />
-        </svg>
-        Skills
-      </h1>
-      <p>My coding skills</p>
+    <section class="flex flex-col gap-4 border-y-2 mt-4 py-4">
+      <div class="">
+        <h1 class="text-xl font-medium flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-code-xml"
+          >
+            <path d="m18 16 4-4-4-4" />
+            <path d="m6 8-4 4 4 4" />
+            <path d="m14.5 4-5 16" />
+          </svg>
+          Skills
+        </h1>
+        <p>My coding skills</p>
+      </div>
       <BoardSkills />
     </section>
   </div>

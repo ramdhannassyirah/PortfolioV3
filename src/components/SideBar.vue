@@ -4,8 +4,8 @@
       <div class="flex flex-col gap-3">
         <RouterLink
           to="/"
-          active-class="bg-slate-50"
           class="items-center px-2 rounded-md py-2 gap-2 flex"
+          :class="{ 'bg-slate-50': $route.path === '/' }"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -72,10 +72,34 @@
           </svg>
           Projects</RouterLink
         >
+        <RouterLink
+          active-class="bg-slate-50"
+          class="items-center px-2 rounded-md py-2 gap-2 flex"
+          to="/contact"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-message-circle-more"
+          >
+            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+            <path d="M8 12h.01" />
+            <path d="M12 12h.01" />
+            <path d="M16 12h.01" />
+          </svg>
+          Contact</RouterLink
+        >
       </div>
     </div>
   </aside>
 </template>
 <script setup>
+import router from '@/router'
 import { RouterLink } from 'vue-router'
 </script>

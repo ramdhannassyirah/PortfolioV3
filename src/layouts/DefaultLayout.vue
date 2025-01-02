@@ -3,7 +3,7 @@
     <Navbar />
   </header>
   <main class="flex w-full gap-4">
-    <SideBar class="hidden md:block" />
+    <SideBar class="hidden lg:block" />
     <div class="px-4 pt-8 max-w-4xl mx-auto">
       <RouterView></RouterView>
     </div>

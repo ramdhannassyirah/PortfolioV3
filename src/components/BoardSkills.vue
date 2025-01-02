@@ -2,7 +2,7 @@
 import CardSkills from './common/Card/CardSkills.vue'
 </script>
 <template>
-  <div class="flex gap-4 flex-wrap">
+  <div class="flex flex-wrap gap-4">
     <CardSkills v-for="item in 10" :key="item" />
   </div>
 </template>
