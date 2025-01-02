@@ -101,7 +101,7 @@ const contacts = [
   },
   {
     title: 'Instagram',
-    description: 'Follow me on Instagram',
+    description: 'Follow & Chat me on Instagram',
     link: 'https://instagram.com/ramdhannassyirah',
     icon: 'instagram',
   },

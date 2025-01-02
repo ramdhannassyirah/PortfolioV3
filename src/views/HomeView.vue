@@ -49,11 +49,13 @@
         Services
       </h1>
       <p>I can deliver the following services</p>
+      <BoardServices />
     </section>
   </div>
 </template>
 
 <script setup>
+import BoardServices from '@/components/BoardServices.vue'
 import { gsap } from 'gsap'
 import { TextPlugin } from 'gsap/TextPlugin'
 import { onMounted } from 'vue'
