@@ -90,7 +90,7 @@ const contacts = [
   {
     title: 'WhatsApp',
     description: 'Chat with me on WhatsApp',
-    link: 'https://wa.me/085156330411',
+    link: 'https://wa.me/6285156330411',
     icon: 'whatsapp',
   },
   {
