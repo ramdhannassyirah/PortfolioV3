@@ -1,8 +1,8 @@
 <template>
   <div class="space-y-4">
-    <h1 class="text-3xl font-bold">
-      Hi, I'm
-      <span class="text-run"> Software Engineer </span>
+    <h1 class="text-lg font-semibold">
+      Hi, I'm <br />
+      <span class="text-run text-3xl font-bold"> Software Engineer </span>
     </h1>
     <ul class="flex gap-2 flex-row lg:gap-4 items-center lg:ml-0">
       <li class="flex items-center gap-3 bg-slate-100 px-4 rounded-full w-fit">
@@ -65,7 +65,7 @@ onMounted(() => {
   gsap.to('.text-run', {
     repeat: -1,
     repeatDelay: 1,
-    duration: 2.5, // Durasi animasi (sesuaikan dengan kebutuhan)
+    duration: 3, // Durasi animasi (sesuaikan dengan kebutuhan)
     text: {
       value: 'Ramdhan Nassyirah',
       delimiter: '',
