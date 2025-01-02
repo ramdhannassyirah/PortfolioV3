@@ -1,30 +1,33 @@
-<script setup>
-import CardSkills from './common/Card/CardSkills.vue'
-</script>
-
 <template>
   <div class="overflow-hidden relative py-2">
     <!-- Wrapper untuk marquee -->
     <div class="flex items-center gap-4 animate-marquee whitespace-nowrap">
-      <!-- Elemen asli -->
-      <div v-for="item in 10" :key="'original-' + item" class="shrink-0">
-        <CardSkills />
-      </div>
       <!-- Duplikasi elemen untuk efek seamless -->
-      <div v-for="item in 10" :key="'duplicate-' + item" class="shrink-0">
-        <CardSkills />
+      <div v-for="item in techs" :key="'original-' + item" class="shrink-0">
+        <div class="flex items-center bg-white shadow-md border rounded-full px-4 py-1 gap-3">
+          <p class="text-sm font-semibold text-gray-800">{{ item }}</p>
+        </div>
+      </div>
+      <div v-for="item in techs" :key="'duplicate-' + item" class="shrink-0">
+        <div class="flex items-center bg-white shadow-md border rounded-full px-4 py-1 gap-3">
+          <p class="text-sm font-semibold text-gray-800">{{ item }}</p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<style>
+<script setup>
+const techs = ['HTML', 'CSS', 'Tailwind CSS', 'JavaScript', 'Vue.js', 'Nuxt.js', 'Laravel']
+</script>
+
+<style scoped>
 @keyframes marquee {
   0% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%); /* Moved to 50% to ensure continuity */
   }
 }
 
