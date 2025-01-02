@@ -8,7 +8,7 @@ const services = [
       'Create stunning, user-friendly fullstack web applications using modern technologies.',
   },
   {
-    title: 'UI Design',
+    title: 'Web Design',
     description: 'Design intuitive and visually appealing user interfaces for web applications.',
   },
 ]
