@@ -2,23 +2,24 @@
   <div
     class="max-w-md border rounded-lg cursor-pointer hover:scale-105 transition-all duration-300 overflow-hidden shadow-md bg-white"
   >
-    <img
-      src="https://via.placeholder.com/300"
-      class="w-full h-40 object-cover"
-      alt="Project Thumbnail"
-    />
+    <img :src="image" class="w-full h-40 object-cover" alt="Project Thumbnail" />
     <div class="p-4">
-      <h1 class="text-lg font-semibold text-gray-800">Projects</h1>
+      <h1 class="text-lg font-semibold text-gray-800">{{ title }}</h1>
+      <p class="text-xs mt-1 text-gray-600">{{ technologies.join(', ') }}</p>
       <p class="mt-2 text-sm text-gray-600 line-clamp-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. am cumque, ipsam aspernatur esse
-        explicabo tempore corporis asperiores reprehenderit hic reiciendis!Veni am cumque, ipsam
-        aspernatur esse explicabo tempore corporis asperiores reprehenderit hic reiciendis!am
-        cumque, ipsam aspernatur esse explicabo tempore corporis asperiores reprehenderit hic
-        reiciendis!
+        {{ description }}
       </p>
     </div>
   </div>
 </template>
+<script setup>
+defineProps({
+  title: String,
+  description: String,
+  image: String,
+  technologies: Array,
+})
+</script>
 
 <style scoped>
 @media (min-width: 640px) {
