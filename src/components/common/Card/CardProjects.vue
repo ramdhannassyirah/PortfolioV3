@@ -1,5 +1,6 @@
 <template>
-  <div
+  <RouterLink
+    :to="`/projects/${slug}`"
     class="max-w-md border rounded-lg cursor-pointer hover:scale-105 transition-all duration-300 overflow-hidden shadow-md bg-white"
   >
     <img :src="image" class="w-full h-40 object-cover object-top" alt="Project Thumbnail" />
@@ -10,14 +11,17 @@
         {{ description }}
       </p>
     </div>
-  </div>
+  </RouterLink>
 </template>
 <script setup>
+import { RouterLink } from 'vue-router'
+
 defineProps({
   title: String,
   description: String,
   image: String,
   technologies: Array,
+  slug: String,
 })
 </script>
 

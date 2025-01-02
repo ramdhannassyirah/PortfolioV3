@@ -1,6 +1,6 @@
 <script setup>
 import CardProjects from './common/Card/CardProjects.vue'
-import { ref, onMounted } from 'vue'
+import { ref, onBeforeMount } from 'vue'
 import sanityClient from '../sanityClient.js'
 
 // Inisialisasi Sanity client
@@ -16,16 +16,18 @@ const fetchProjects = async () => {
       title,
       description,
       "imageUrl": image.asset->url,
-      technologies
+      technologies,
+      slug
     }`
     projects.value = await sanityClient.fetch(query)
   } catch (error) {
     console.error('Error fetching projects:', error)
   }
+  console.log(projects.value)
 }
 
 // Fetch data saat komponen di-mount
-onMounted(() => {
+onBeforeMount(() => {
   fetchProjects()
 })
 </script>
@@ -39,6 +41,7 @@ onMounted(() => {
       :description="project.description"
       :image="project.imageUrl"
       :technologies="project.technologies"
+      :slug="project.slug.current"
     />
   </div>
 </template>

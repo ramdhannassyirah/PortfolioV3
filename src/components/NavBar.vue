@@ -8,7 +8,7 @@
           alt="logo"
         />
         <div class="flex items-center gap-2">
-          <a href="/" class="text-md md:text-lg font-semibold">Ramdhan Nassyirah</a>
+          <RouterLink to="/" class="text-md md:text-lg font-semibold">Ramdhan Nassyirah</RouterLink>
           <div data-testid="tooltip-container" class="relative inline-block">
             <div data-testid="children-container" class="tooltip-container relative">
               <svg
@@ -317,7 +317,7 @@
 
 <script setup>
 import { ref, watch } from 'vue'
-import { useRouter } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 
 const isOpen = ref(false)
 const router = useRouter()
