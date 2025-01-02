@@ -9,9 +9,12 @@
     />
     <div class="p-4">
       <h1 class="text-lg font-semibold text-gray-800">Projects</h1>
-      <p class="mt-2 text-sm text-gray-600">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam cumque, ipsam aspernatur
-        esse explicabo tempore corporis asperiores reprehenderit hic reiciendis!
+      <p class="mt-2 text-sm text-gray-600 line-clamp-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. am cumque, ipsam aspernatur esse
+        explicabo tempore corporis asperiores reprehenderit hic reiciendis!Veni am cumque, ipsam
+        aspernatur esse explicabo tempore corporis asperiores reprehenderit hic reiciendis!am
+        cumque, ipsam aspernatur esse explicabo tempore corporis asperiores reprehenderit hic
+        reiciendis!
       </p>
     </div>
   </div>
