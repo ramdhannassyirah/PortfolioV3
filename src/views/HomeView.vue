@@ -26,7 +26,7 @@
       team player dedicated to delivering efficient, scalable, and visually appealing web
       applications.
     </p>
-    <section class="flex flex-col gap-2">
+    <section class="flex flex-col">
       <h1 class="text-xl font-medium text-center flex items-center gap-2 lg:text-left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -51,10 +51,10 @@
         </svg>
         Blog
       </h1>
-      <p>Happy reading and hopefully it's useful!</p>
+      <p class="pt-1 pb-4">Happy reading and hopefully it's useful!</p>
       <BoardBlog class="border-b-2 pb-4" />
     </section>
-    <section class="flex flex-col gap-2">
+    <section class="flex flex-col">
       <h1 class="text-xl font-medium text-center flex items-center gap-2 lg:text-left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@
         </svg>
         Services
       </h1>
-      <p>I can deliver the following services</p>
+      <p class="pt-1 pb-4">I can deliver the following services</p>
       <BoardServices />
     </section>
   </div>
