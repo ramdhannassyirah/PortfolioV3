@@ -1,19 +1,19 @@
 <template>
   <RouterLink
     :to="`/blog/${blog.slug.current}`"
-    class="max-w-52 cursor-pointer hover:scale-95 transition-all duration-300 overflow-hidden"
+    class="cursor-pointer hover:scale-95 transition-all duration-300 overflow-hidden"
   >
     <img
       :src="blog.imageUrl || 'https://via.placeholder.com/300x200'"
       :alt="blog.title || 'Blog Image'"
-      class="w-52 h-28 rounded-lg object-cover object-top"
+      class="w-[768px] h-60 rounded-lg object-cover object-top"
     />
     <div class="pt-1">
-      <h1 class="text-md font-semibold text-gray-800 line-clamp-1">
+      <h1 class="text-md font-semibold text-gray-800">
         {{ blog.title || 'Untitled Blog' }}
       </h1>
 
-      <p class="text-xs text-gray-600 line-clamp-1">
+      <p class="text-xs mt-1 text-gray-600 line-clamp-1">
         {{ formattedDate }}
       </p>
     </div>

@@ -8,6 +8,7 @@ import ContactView from '@/views/ContactView.vue'
 import ProjectDetails from '@/components/ProjectDetails.vue'
 import BlogView from '@/views/BlogView.vue'
 import NotFound from '@/views/NotFound.vue'
+import BlogDetails from '@/components/BlogDetails.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,12 @@ const router = createRouter({
           name: 'blog',
           component: BlogView,
           meta: { title: 'Blog | Ramdhan Nassyirah' },
+        },
+        {
+          path: '/blog/:slug',
+          name: 'blogDetails',
+          component: BlogDetails,
+          meta: { title: 'Blog Detail | Ramdhan Nassyirah' },
         },
         {
           path: '/projects',

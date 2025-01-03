@@ -1,9 +1,9 @@
 <template>
-  <div class="md:px-4">
-    <div
-      v-if="loading"
-      class="absolute flex items-center justify-center bg-white h-full w-full"
-    ></div>
+  <div class="md:px-4 relative">
+    <!-- Loading indicator -->
+    <div v-if="loading" class="absolute flex items-center justify-center bg-white h-full w-full">
+      <span>Loading...</span>
+    </div>
     <RouterLink class="text-gray-600 flex items-center gap-2" to="/projects"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
