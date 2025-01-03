@@ -6,6 +6,7 @@ import ToDoList from '@/views/ToDoList.vue'
 import ProjectsView from '@/views/ProjectsView.vue'
 import ContactView from '@/views/ContactView.vue'
 import ProjectDetails from '@/components/ProjectDetails.vue'
+import BlogView from '@/views/BlogView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,6 +26,12 @@ const router = createRouter({
           name: 'about',
           component: AboutView,
           meta: { title: 'About | Ramdhan Nassyirah' },
+        },
+        {
+          path: '/blog',
+          name: 'blog',
+          component: BlogView,
+          meta: { title: 'Blog | Ramdhan Nassyirah' },
         },
         {
           path: '/projects',

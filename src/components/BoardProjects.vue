@@ -23,7 +23,6 @@ const fetchProjects = async () => {
   } catch (error) {
     console.error('Error fetching projects:', error)
   }
-  console.log(projects.value)
 }
 
 // Fetch data saat komponen di-mount

@@ -7,7 +7,7 @@
     <div class="p-4">
       <h1 class="text-lg font-semibold text-gray-800">{{ title }}</h1>
       <p class="text-xs mt-1 text-gray-600">{{ technologies.join('  ') }}</p>
-      <p class="mt-2 text-sm text-gray-600 line-clamp-4">
+      <p class="mt-2 text-sm text-gray-600 line-clamp-3">
         {{ description }}
       </p>
     </div>

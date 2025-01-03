@@ -38,6 +38,34 @@
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
+          class="lucide lucide-book-open-text"
+        >
+          <path d="M12 7v14" />
+          <path d="M16 12h2" />
+          <path d="M16 8h2" />
+          <path
+            d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
+          />
+          <path d="M6 12h2" />
+          <path d="M6 8h2" />
+        </svg>
+        Blog
+      </h1>
+      <p>Happy reading and hopefully it's useful!</p>
+      <BoardBlog class="border-b-2 pb-4" />
+    </section>
+    <section class="flex flex-col gap-2">
+      <h1 class="text-xl font-medium text-center flex items-center gap-2 lg:text-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
           class="lucide lucide-network"
         >
           <rect x="16" y="16" width="6" height="6" rx="1" />
@@ -55,6 +83,7 @@
 </template>
 
 <script setup>
+import BoardBlog from '@/components/BoardBlog.vue'
 import BoardServices from '@/components/BoardServices.vue'
 import { gsap } from 'gsap'
 import { TextPlugin } from 'gsap/TextPlugin'
