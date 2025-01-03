@@ -26,7 +26,7 @@
     </div>
 
     <!-- Blog content -->
-    <div class="flex container h-32 w-full items-center gap-4 overflow-x-scroll">
+    <div class="flex container h-42 w-full items-center gap-4 overflow-x-scroll">
       <CardBlog v-for="blogs in blog" :blog="blogs" class="flex-shrink-0 mt-2" :key="blogs.id" />
     </div>
   </div>
