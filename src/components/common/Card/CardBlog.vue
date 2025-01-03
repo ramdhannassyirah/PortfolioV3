@@ -10,9 +10,10 @@
     />
     <div class="pt-1">
       <h1 class="text-md font-semibold text-gray-800">My Blog</h1>
-      <p class="mt-1 text-sm text-gray-600 line-clamp-2">
+      <p class="mt-1 text-sm text-gray-600 line-clamp-1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, voluptatibus!
       </p>
+      <p class="mt-1 text-xs text-gray-600 line-clamp-1">January 1, 2025</p>
     </div>
   </RouterLink>
 </template>
