@@ -7,6 +7,7 @@ import ProjectsView from '@/views/ProjectsView.vue'
 import ContactView from '@/views/ContactView.vue'
 import ProjectDetails from '@/components/ProjectDetails.vue'
 import BlogView from '@/views/BlogView.vue'
+import NotFound from '@/views/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -53,7 +54,11 @@ const router = createRouter({
         },
       ],
     },
-
+    {
+      path: '/:pathMatch(.*)*', // Vue Router 4 (untuk Vue 3)
+      name: 'NotFound',
+      component: NotFound,
+    },
     {
       path: '/todo',
       name: 'todo',
