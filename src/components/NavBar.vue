@@ -1,16 +1,16 @@
 <template>
   <nav>
-    <div class="py-3 px-4 border-b flex w-full items-center justify-between">
-      <div class="flex gap-3 items-center">
+    <div class="flex items-center justify-between w-full px-4 py-3 border-b">
+      <div class="flex items-center gap-3">
         <img
           src="../assets/image/dun.jpeg"
-          class="w-10 h-10 rounded-full object-cover object-center ring-1 ring-black flex-shrink-0"
+          class="flex-shrink-0 object-cover object-center w-10 h-10 rounded-full ring-1 ring-black"
           alt="logo"
         />
         <div class="flex items-center gap-2">
-          <RouterLink to="/" class="text-md md:text-lg font-semibold">Ramdhan Nassyirah</RouterLink>
+          <RouterLink to="/" class="font-semibold text-md md:text-lg">Ramdhan Nassyirah</RouterLink>
           <div data-testid="tooltip-container" class="relative inline-block">
-            <div data-testid="children-container" class="tooltip-container relative">
+            <div data-testid="children-container" class="relative tooltip-container">
               <svg
                 stroke="currentColor"
                 fill="currentColor"
@@ -32,9 +32,9 @@
       </div>
 
       <!-- Social Media for Desktop -->
-      <div class="lg:flex items-center gap-4 hidden">
+      <div class="items-center hidden gap-4 lg:flex">
         <div
-          class="w-10 h-10 bg-slate-100 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
+          class="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full cursor-pointer bg-slate-100 hover:-translate-y-1"
         >
           <a href="https://github.com/ramdhannassyirah" target="_blank" rel="noopener noreferrer">
             <svg
@@ -57,7 +57,7 @@
           </a>
         </div>
         <div
-          class="w-10 h-10 bg-slate-100 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
+          class="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full cursor-pointer bg-slate-100 hover:-translate-y-1"
         >
           <a
             href="http://www.instagram.com/ramdhannassyirah"
@@ -83,7 +83,7 @@
           </a>
         </div>
         <div
-          class="w-10 h-10 bg-slate-100 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
+          class="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full cursor-pointer bg-slate-100 hover:-translate-y-1"
         >
           <a
             href="https://id.linkedin.com/in/ramdhannassyirah"
@@ -136,11 +136,11 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div v-if="isOpen" class="bg-white z-50 h-dvh lg:hidden absolute w-full">
+    <div v-if="isOpen" class="absolute z-50 w-full bg-white h-dvh lg:hidden">
       <div class="flex flex-col gap-3 p-4">
         <RouterLink
           to="/"
-          class="items-center px-2 rounded-md py-2 gap-2 flex"
+          class="flex items-center gap-2 px-2 py-2 rounded-md"
           :class="{ 'bg-slate-100': $route.path === '/' }"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -162,7 +162,7 @@
         >
         <RouterLink
           active-class="bg-slate-100"
-          class="items-center px-2 rounded-md py-2 gap-2 flex"
+          class="flex items-center gap-2 px-2 py-2 rounded-md"
           to="/about"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +187,7 @@
         >
         <RouterLink
           active-class="bg-slate-100"
-          class="items-center px-2 rounded-md py-2 gap-2 flex"
+          class="flex items-center gap-2 px-2 py-2 rounded-md"
           to="/blog"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -210,7 +210,7 @@
         >
         <RouterLink
           active-class="bg-slate-100"
-          class="items-center px-2 rounded-md py-2 gap-2 flex"
+          class="flex items-center gap-2 px-2 py-2 rounded-md"
           to="/projects"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -233,7 +233,7 @@
         >
         <RouterLink
           active-class="bg-slate-100"
-          class="items-center px-2 rounded-md py-2 gap-2 flex"
+          class="flex items-center gap-2 px-2 py-2 rounded-md"
           to="/contact"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -254,10 +254,39 @@
           </svg>
           Contact</RouterLink
         >
+
+        <a
+          active-class="bg-slate-100"
+          class="flex items-center gap-2 px-2 py-2 rounded-md"
+          href="https://dunstock.web.id/"
+          target="_blank"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-hand-platter"
+          >
+            <path d="M12 3V2" />
+            <path
+              d="m15.4 17.4 3.2-2.8a2 2 0 1 1 2.8 2.9l-3.6 3.3c-.7.8-1.7 1.2-2.8 1.2h-4c-1.1 0-2.1-.4-2.8-1.2l-1.302-1.464A1 1 0 0 0 6.151 19H5"
+            />
+            <path d="M2 14h12a2 2 0 0 1 0 4h-2" />
+            <path d="M4 10h16" />
+            <path d="M5 10a7 7 0 0 1 14 0" />
+            <path d="M5 14v6a1 1 0 0 1-1 1H2" />
+          </svg>
+          Service
+        </a>
       </div>
-      <div class="flex p-4 items-center justify-end gap-4">
+      <div class="flex items-center justify-end gap-4 p-4">
         <div
-          class="w-10 h-10 bg-slate-100 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
+          class="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full cursor-pointer bg-slate-100 hover:-translate-y-1"
         >
           <a href="https://github.com/ramdhannassyirah" target="_blank" rel="noopener noreferrer">
             <svg
@@ -280,7 +309,7 @@
           </a>
         </div>
         <div
-          class="w-10 h-10 bg-slate-100 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
+          class="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full cursor-pointer bg-slate-100 hover:-translate-y-1"
         >
           <a
             href="http://www.instagram.com/ramdhannassyirah"
@@ -306,7 +335,7 @@
           </a>
         </div>
         <div
-          class="w-10 h-10 bg-slate-100 hover:-translate-y-1 transition-all duration-300 cursor-pointer flex items-center justify-center rounded-full"
+          class="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full cursor-pointer bg-slate-100 hover:-translate-y-1"
         >
           <a
             href="https://id.linkedin.com/in/ramdhannassyirah"
