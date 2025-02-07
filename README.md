@@ -1,6 +1,6 @@
 # 📌 Portfolio
 
-![Portfolio Preview](https://via.placeholder.com/1200x600)
+![Portfolio Preview](https://github.com/user-attachments/assets/ceb6c06e-fa34-4fbe-9d7d-3a1a6d3bf4db)
 
 🚀 **Portfolio Website** built using Vue.js, Tailwind CSS, and Sanity CMS.
 
