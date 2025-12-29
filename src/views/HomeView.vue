@@ -1,33 +1,64 @@
 <template>
-  <div class="space-y-4 md:px-4">
-    <h1 class="text-lg font-semibold">
-      Hi, I'm <br />
-      <span class="text-3xl font-bold text-run"> Software Engineer </span>
-    </h1>
-    <ul class="flex flex-row items-center gap-2 lg:gap-4 lg:ml-0">
-      <li class="flex items-center gap-3 px-4 rounded-full bg-slate-100 w-fit">
-        Remote worker
-        <span class="relative flex w-3 h-3">
-          <span
-            class="absolute inline-flex w-full h-full bg-green-400 rounded-full opacity-75 animate-ping"
-          ></span>
-          <span class="relative inline-flex w-3 h-3 bg-green-500 rounded-full"></span>
-        </span>
-      </li>
-      <li class="px-4 rounded-full bg-slate-100 w-fit">
-        Based in Cianjur <span class="ml-1">🇮🇩</span>
-      </li>
-    </ul>
-    <p
-      class="max-w-3xl pb-4 mx-auto leading-relaxed text-justify border-b-2 md:leading-loose lg:mx-0"
-    >
-      Passionate and seasoned Software Engineer with a strong focus on frontend development.
-      Proficient in JavaScript and well-versed in all aspects of web technologies. Collaborative
-      team player dedicated to delivering efficient, scalable, and visually appealing web
-      applications.
-    </p>
+  <div class="space-y-10">
+    <!-- HERO -->
+    <div class="grid gap-8 border-b-2 pb-8 md:grid-cols-2 md:items-center md:justify-items-center">
+      <!-- TEXT -->
+      <div class="space-y-4 order-2 md:order-1">
+        <h1 class="text-lg font-semibold leading-snug">
+          Hi, I'm <br />
+          <span class="block text-2xl font-bold text-run sm:text-3xl">
+            Frontend / Fullstack Developer
+          </span>
+        </h1>
+
+        <!-- BADGES -->
+        <ul class="flex flex-wrap items-center gap-2">
+          <li class="flex items-center gap-3 rounded-full bg-slate-100 px-4 py-1 text-sm">
+            Remote worker
+            <span class="relative flex h-3 w-3">
+              <span
+                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"
+              ></span>
+              <span class="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
+            </span>
+          </li>
+          <li class="rounded-full bg-slate-100 px-4 py-1 text-sm">
+            Based in Cianjur <span class="ml-1">🇮🇩</span>
+          </li>
+        </ul>
+
+        <!-- DESC -->
+        <p class="text-sm leading-relaxed text-gray-700 sm:text-base sm:leading-loose md:text-left">
+          Web Developer dengan pengalaman ±1 tahun dalam pengembangan aplikasi web modern
+          menggunakan Laravel, Vue.js, dan Nuxt.js. Berpengalaman membangun SPA, UI responsif,
+          integrasi backend, serta kolaborasi tim menggunakan Git. Terbiasa mengerjakan proyek skala
+          nyata dan deadline ketat.
+        </p>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="flex justify-center md:justify-end order-1 md:order-2">
+        <img
+          src="../assets/image/dun.jpeg"
+          alt="Profile"
+          class="h-32 w-32 rounded-full object-cover ring-2 ring-black sm:h-40 sm:w-40"
+        />
+      </div>
+    </div>
+
+    <!-- SKILLS -->
     <section class="flex flex-col">
-      <h1 class="flex items-center gap-2 text-xl font-medium text-center lg:text-left">
+      <h2 class="flex items-center justify-center gap-2 text-xl font-medium md:justify-start">
+        <Icon icon="simple-icons:hyperskill" width="20" height="20" />
+        Skill
+      </h2>
+      <p class="pb-4 pt-1 text-center text-sm md:text-left">Kemampuan yang saya miliki.</p>
+      <BoardSkills class="border-b-2 pb-6" />
+    </section>
+
+    <!-- BLOG -->
+    <section class="flex flex-col">
+      <h2 class="flex items-center justify-center gap-2 text-xl font-medium md:justify-start">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -50,68 +81,52 @@
           <path d="M6 8h2" />
         </svg>
         Blog
-      </h1>
-      <p class="pt-1 pb-4">Happy reading and hopefully it's useful!</p>
-      <BoardBlog class="pb-4 border-b-2" />
+      </h2>
+      <p class="pb-4 pt-1 text-center text-sm md:text-left">Selamat membaca blog saya</p>
+      <BoardBlog class="border-b-2 pb-6" />
     </section>
-    <section class="flex flex-col">
-      <div class="flex items-center justify-between gap-1">
-        <div class="">
-          <h1 class="flex items-center gap-2 text-xl font-medium text-center lg:text-left">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-network"
-            >
-              <rect x="16" y="16" width="6" height="6" rx="1" />
-              <rect x="2" y="16" width="6" height="6" rx="1" />
-              <rect x="9" y="2" width="6" height="6" rx="1" />
-              <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
-              <path d="M12 12V8" />
-            </svg>
-            Services
-          </h1>
-          <p class="pt-1 pb-4">I can deliver the following services</p>
-        </div>
-        <div class="">
-          <a class="inline-flex items-center gap-2" target="_blank" href="https://dunstock.web.id/"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-square-arrow-out-up-right"
-            >
-              <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
-              <path d="m21 3-9 9" />
-              <path d="M15 3h6v6" /></svg
-            >Link Service</a
-          >
-        </div>
-      </div>
-      <BoardServices />
-    </section>
+
+    <!-- PROJECT -->
+    <ProjectSection :projects="projects" />
   </div>
 </template>
 
 <script setup>
 import BoardBlog from '@/components/BoardBlog.vue'
-import BoardServices from '@/components/BoardServices.vue'
+import BoardSkills from '@/components/BoardSkills.vue'
+import ProjectSection from '@/components/ProjectSection.vue'
+import { Icon } from '@iconify/vue'
 import { gsap } from 'gsap'
 import { TextPlugin } from 'gsap/TextPlugin'
 import { onMounted } from 'vue'
+
+const preview = () => {
+  window.open('https://ramdhannassyirah.vercel.app', '_blank')
+}
+
+const projects = [
+  {
+    title: 'Web Voting Real-time',
+    description:
+      'Aplikasi web voting real-time menggunakan Laravel dan Livewire dengan sistem token.',
+    tech: ['Laravel', 'Livewire', 'MySQL'],
+    image: '/images/projects/voting.png',
+    repo: 'https://github.com/username/web-voting',
+  },
+  {
+    title: 'Company Profile CMS',
+    description: 'CMS company profile berbasis Nuxt.js dengan SSR dan MongoDB Atlas.',
+    tech: ['Nuxt.js', 'MongoDB', 'Tailwind'],
+    image: '/images/projects/company-profile.png',
+    link: 'https://company-profile.com',
+  },
+  {
+    title: 'Digital Product Store',
+    description: 'Website penjualan produk digital menggunakan Laravel dan Inertia.js.',
+    tech: ['Laravel', 'Inertia', 'Vue'],
+    image: '/images/projects/digital-store.png',
+  },
+]
 
 gsap.registerPlugin(TextPlugin)
 
