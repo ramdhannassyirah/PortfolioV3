@@ -1,13 +1,4 @@
 <script setup lang="ts">
-interface Project {
-  title: string
-  description: string
-  technologies: string[]
-  imageUrl: string
-  link?: string
-  repo?: string
-}
-
 import { onMounted, ref } from 'vue'
 import sanityClient from '@/sanityClient'
 import { PROJECT_LIST_QUERY } from '@/sanity/queries'
@@ -19,6 +10,7 @@ const fetchProjects = async () => {
   try {
     const response = await sanityClient.fetch(PROJECT_LIST_QUERY)
     projects.value = response
+    isLoading.value = false
   } catch (error) {
     console.error('Error fetching projects:', error)
   }
@@ -26,7 +18,6 @@ const fetchProjects = async () => {
 
 onMounted(() => {
   fetchProjects()
-  isLoading.value = false
 })
 </script>
 
