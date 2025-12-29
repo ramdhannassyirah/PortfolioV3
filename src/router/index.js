@@ -62,7 +62,7 @@ const router = createRouter({
       ],
     },
     {
-      path: '/:pathMatch(.*)*', // Vue Router 4 (untuk Vue 3)
+      path: '/:pathMatch(.*)*',
       name: 'NotFound',
       component: NotFound,
     },
