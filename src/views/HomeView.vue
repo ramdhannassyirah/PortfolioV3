@@ -128,17 +128,83 @@
 
     <!-- SKILLS -->
     <section class="flex flex-col">
-      <h2 class="flex items-center justify-center gap-2 text-xl font-medium md:justify-start">
+      <h2 class="flex items-center gap-2 text-xl font-medium">
         <Icon icon="simple-icons:hyperskill" width="20" height="20" />
         Skill
       </h2>
-      <p class="pb-4 pt-1 text-center text-sm md:text-left">Kemampuan yang saya miliki.</p>
+      <p class="pb-4 pt-1 text-sm text-left">Kemampuan yang saya miliki.</p>
       <BoardSkills class="border-b-2 pb-6" />
     </section>
 
+    <div class="grid md:grid-cols-2 gap-6 border-b-2 pb-6">
+      <!-- WORK EXPERIENCE -->
+      <section class="flex flex-col border-b-2 pb-6 md:pb-0 md:border-none">
+        <h2 class="flex items-center gap-2 text-xl font-medium">
+          <Icon icon="mdi:briefcase-outline" width="22" />
+          Pengalaman Kerja
+        </h2>
+
+        <div class="relative mt-6 pl-6 space-y-8">
+          <div class="relative">
+            <span class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-primary"></span>
+
+            <p class="text-xs text-gray-500">Feb 2025 – Saat ini</p>
+            <h3 class="font-semibold">
+              Fullstack Developer (WFA)
+              <span class="font-normal text-gray-500"> — PT Pragma Informatika </span>
+            </h3>
+
+            <ul class="mt-2 list-disc pl-4 text-sm text-gray-700 space-y-1">
+              <li>Mengembangkan dan memelihara aplikasi web menggunakan Laravel & Vue Inertia</li>
+              <li>Membangun website yang responsif dan scalable</li>
+              <li>Membuat reusable UI components dengan Tailwind CSS</li>
+              <li>Mengelola database MySQL (migration, seeding, optimasi query)</li>
+              <li>Kolaborasi tim menggunakan GitLab</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRAINING & CERTIFICATION -->
+      <section class="flex flex-col md:border-l-2 md:border-gray-200 md:pl-6">
+        <h2 class="flex items-center gap-2 text-xl font-medium">
+          <Icon icon="mdi:certificate-outline" width="22" />
+          Pelatihan & Sertifikasi
+        </h2>
+
+        <div class="relative mt-6 pl-6 space-y-8">
+          <!-- JDA -->
+          <div class="relative">
+            <span class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-primary"></span>
+
+            <p class="text-xs text-gray-500">Februari – Juli 2024</p>
+            <h3 class="font-semibold">Fullstack Developer Program (Fase 1–3)</h3>
+            <p class="text-sm text-gray-600">Jabar Digital Academy</p>
+
+            <ul class="mt-2 list-disc pl-4 text-sm text-gray-700 space-y-1">
+              <li><strong>Fase 1:</strong> Computational Thinking, HTML, CSS, PHP Fundamental</li>
+              <li><strong>Fase 2:</strong> ERD, MySQL, Laravel MVC, Controller & Model</li>
+              <li><strong>Fase 3:</strong> Requirement Analysis, SDLC, Project Management</li>
+              <li>Final Project (Real Case Project)</li>
+            </ul>
+          </div>
+
+          <!-- SEKOLAH BETA -->
+          <div class="relative">
+            <p class="text-xs text-gray-500">Mar – Apr 2023</p>
+            <h3 class="font-semibold">Online Training — Sekolah Beta</h3>
+
+            <ul class="mt-2 list-disc pl-4 text-sm text-gray-700 space-y-1">
+              <li>Pengembangan website menggunakan Nuxt.js & Supabase</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <!-- BLOG -->
     <section class="flex flex-col">
-      <h2 class="flex items-center justify-center gap-2 text-xl font-medium md:justify-start">
+      <h2 class="flex items-center gap-2 text-xl font-medium">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -162,7 +228,7 @@
         </svg>
         Blog
       </h2>
-      <p class="pb-4 pt-1 text-center text-sm md:text-left">Selamat membaca blog saya</p>
+      <p class="pb-4 pt-1 text-sm">Selamat membaca blog saya</p>
       <BoardBlog class="border-b-2 pb-6" />
     </section>
 

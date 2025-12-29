@@ -20,13 +20,11 @@ defineProps<{
   <section class="space-y-6">
     <!-- Header -->
     <div>
-      <h2 class="flex items-center justify-center gap-2 text-xl font-medium md:justify-start">
+      <h2 class="flex items-center gap-2 text-xl font-medium">
         <Icon icon="simple-icons:hyperskill" width="20" height="20" />
         Projects
       </h2>
-      <p class="text-sm text-gray-500 text-center md:text-left">
-        Beberapa project yang pernah saya kerjakan
-      </p>
+      <p class="text-sm text-gray-500">Beberapa project yang pernah saya kerjakan</p>
     </div>
 
     <!-- GRID -->
