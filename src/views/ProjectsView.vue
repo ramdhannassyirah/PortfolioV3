@@ -1,7 +1,134 @@
+<script setup lang="ts">
+interface Project {
+  title: string
+  description: string
+  technologies: string[]
+  imageUrl: string
+  link?: string
+  repo?: string
+}
+
+import { onMounted, ref } from 'vue'
+import sanityClient from '@/sanityClient'
+import { PROJECT_LIST_QUERY } from '@/sanity/queries'
+
+const projects = ref()
+const isLoading = ref(true)
+
+const fetchProjects = async () => {
+  try {
+    const response = await sanityClient.fetch(PROJECT_LIST_QUERY)
+    projects.value = response
+  } catch (error) {
+    console.error('Error fetching projects:', error)
+  }
+}
+
+onMounted(() => {
+  fetchProjects()
+  isLoading.value = false
+})
+</script>
+
 <template>
-  <div></div>
+  <section class="space-y-6">
+    <!-- Header -->
+    <div>
+      <h2 class="flex items-center gap-2 text-2xl font-medium">Projects</h2>
+      <p class="mb-4 border-b-2 pb-4 text-gray-600">Beberapa project yang pernah saya kerjakan</p>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- SKELETON -->
+      <template v-if="isLoading">
+        <div
+          v-for="n in 6"
+          :key="n"
+          class="animate-pulse overflow-hidden rounded-2xl border bg-white shadow-sm"
+        >
+          <!-- Image skeleton -->
+          <div class="h-44 w-full bg-gray-200"></div>
+
+          <!-- Content skeleton -->
+          <div class="p-5 space-y-3">
+            <div class="h-4 w-3/4 rounded bg-gray-200"></div>
+            <div class="h-3 w-full rounded bg-gray-200"></div>
+            <div class="h-3 w-5/6 rounded bg-gray-200"></div>
+
+            <div class="flex gap-2 mt-3">
+              <div class="h-6 w-14 rounded bg-gray-200"></div>
+              <div class="h-6 w-16 rounded bg-gray-200"></div>
+              <div class="h-6 w-12 rounded bg-gray-200"></div>
+            </div>
+
+            <div class="flex gap-4 mt-4">
+              <div class="h-4 w-20 rounded bg-gray-200"></div>
+              <div class="h-4 w-24 rounded bg-gray-200"></div>
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <!-- REAL DATA -->
+      <template v-else>
+        <div
+          v-for="(project, index) in projects"
+          :key="index"
+          class="group overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:shadow-md"
+        >
+          <!-- Image -->
+          <div class="relative h-44 w-full overflow-hidden bg-gray-100">
+            <img
+              :src="project.imageUrl"
+              :alt="project.title"
+              class="h-full w-full object-cover object-top transition duration-300 group-hover:scale-105"
+            />
+          </div>
+
+          <!-- Content -->
+          <div class="p-5">
+            <h3 class="font-semibold text-gray-800">
+              {{ project.title }}
+            </h3>
+
+            <p class="mt-2 text-sm text-gray-600 line-clamp-3">
+              {{ project.description }}
+            </p>
+
+            <!-- Tech Stack -->
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span
+                v-for="tech in project.technologies"
+                :key="tech"
+                class="rounded-lg bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700"
+              >
+                {{ tech }}
+              </span>
+            </div>
+
+            <!-- Actions -->
+            <div class="mt-5 flex gap-4 text-sm">
+              <a
+                v-if="project.link"
+                :href="project.link"
+                target="_blank"
+                class="border text-xs py-2 px-4 rounded-full border-black hover:bg-black hover:text-white duration-200"
+              >
+                Live Demo
+              </a>
+              <a
+                v-if="project.repo"
+                :href="project.repo"
+                target="_blank"
+                class="border text-xs py-2 px-4 rounded-full border-black bg-black text-white hover:bg-transparent hover:text-black duration-200"
+              >
+                Repository
+              </a>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </section>
 </template>
-
-<script lang="ts" setup></script>
-
-<style></style>

@@ -34,7 +34,7 @@ defineProps<{
       <!-- SKELETON -->
       <template v-if="loading">
         <div
-          v-for="n in 6"
+          v-for="n in 3"
           :key="n"
           class="animate-pulse overflow-hidden rounded-2xl border bg-white shadow-sm"
         >
@@ -64,7 +64,7 @@ defineProps<{
       <!-- REAL DATA -->
       <template v-else>
         <div
-          v-for="(project, index) in projects"
+          v-for="(project, index) in projects.slice(0, 3)"
           :key="index"
           class="group overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:shadow-md"
         >
