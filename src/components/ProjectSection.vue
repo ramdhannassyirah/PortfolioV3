@@ -104,7 +104,7 @@ defineProps<{
                 v-if="project.link"
                 :href="project.link"
                 target="_blank"
-                class="font-medium text-blue-600 hover:underline"
+                class="border text-xs py-2 px-4 rounded-full border-black hover:bg-black hover:text-white duration-200"
               >
                 Live Demo
               </a>
@@ -112,7 +112,7 @@ defineProps<{
                 v-if="project.repo"
                 :href="project.repo"
                 target="_blank"
-                class="font-medium text-gray-700 hover:underline"
+                class="border text-xs py-2 px-4 rounded-full border-black bg-black text-white hover:bg-transparent hover:text-black duration-200"
               >
                 Repository
               </a>

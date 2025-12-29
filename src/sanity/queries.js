@@ -32,6 +32,8 @@ export const PROJECT_LIST_QUERY = `
   description,
   _createdAt,
   technologies,
+  link,
+  repo,
   slug
 }
 `
