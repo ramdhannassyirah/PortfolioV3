@@ -1,9 +1,8 @@
 <template>
   <div class="relative md:px-4">
-    <!-- LOADING OVERLAY -->
     <div
       v-if="loading"
-      class="fixed inset-0 z-50 flex items-center justify-center bg-white "
+      class="fixed inset-0 z-50 flex items-center justify-center bg-white"
       aria-live="polite"
       aria-busy="true"
     >
@@ -14,19 +13,16 @@
       </svg>
     </div>
 
-    <!-- CONTENT -->
     <RouterLink class="flex items-center gap-2 text-gray-600 hover:text-black" to="/blog">
       ← Back
     </RouterLink>
 
-    <!-- SKELETON TITLE -->
     <h1 v-if="!blog" class="mt-4 h-10 w-3/4 animate-pulse rounded bg-gray-200" />
 
     <h1 v-else class="pt-4 text-3xl font-semibold">
       {{ blog.title }}
     </h1>
 
-    <!-- META -->
     <div
       v-if="blog"
       class="mt-2 mb-4 flex flex-col justify-between gap-2 border-b-2 pb-4 md:flex-row"
@@ -39,11 +35,9 @@
       </p>
     </div>
 
-    <!-- IMAGE -->
     <div v-if="!blog" class="mt-4 h-64 w-full animate-pulse rounded-lg bg-gray-200" />
     <img v-else :src="blog.imageUrl" alt="Blog Image" class="w-full rounded-lg object-cover" />
 
-    <!-- BODY -->
     <div v-if="blog" v-html="bodyContent" class="prose mt-6 max-w-none" />
   </div>
 </template>
@@ -54,6 +48,7 @@ import { formatDate } from '@/utils/dateFormat'
 import { useRoute, RouterLink } from 'vue-router'
 import client from '../sanityClient'
 import blockContentToHtml from '@sanity/block-content-to-html'
+import { BLOG_DETAIL_QUERY } from '@/sanity/queries'
 
 const loading = ref(false)
 const blog = ref(null)
@@ -61,20 +56,10 @@ const route = useRoute()
 const slug = route.params.slug
 
 onBeforeMount(async () => {
-  const query = `*[_type == "blog" && slug.current == $slug][0] {
-      _id,
-      "imageUrl": image.asset->url,
-      title,
-      body,
-      author,
-      _createdAt,
-      slug
-    }`
-
   loading.value = true
 
   try {
-    blog.value = await client.fetch(query, { slug })
+    blog.value = await client.fetch(BLOG_DETAIL_QUERY, { slug })
   } catch (error) {
     console.error('Error fetching blog:', error)
   }

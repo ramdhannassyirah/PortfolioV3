@@ -2,10 +2,8 @@
   <header>
     <Navbar />
   </header>
-  <main>
-    <div class="px-4 xl:px-0 py-8 max-w-6xl overflow-hidden mx-auto">
-      <RouterView></RouterView>
-    </div>
+  <main class="max-w-6xl mx-auto px-4 xl:px-0 pt-6">
+    <RouterView></RouterView>
   </main>
 </template>
 <script setup>
