@@ -97,7 +97,7 @@ defineProps<{
             </div>
 
             <!-- Actions -->
-            <div class="mt-5 flex gap-4 text-sm">
+            <div class="mt-5 flex gap-2 text-sm">
               <a
                 v-if="project.link"
                 :href="project.link"
