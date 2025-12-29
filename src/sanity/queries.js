@@ -23,3 +23,15 @@ export const BLOG_SLUGS_QUERY = `
   "slug": slug.current
 }
 `
+
+export const PROJECT_LIST_QUERY = `
+*[_type == "project"] | order(_createdAt desc) {
+  _id,
+  title,
+  "imageUrl": image.asset->url,
+  description,
+  _createdAt,
+  technologies,
+  slug
+}
+`

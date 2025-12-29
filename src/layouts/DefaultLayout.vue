@@ -2,7 +2,7 @@
   <header>
     <Navbar />
   </header>
-  <main class="max-w-6xl mx-auto px-4 xl:px-0 pt-6">
+  <main class="max-w-6xl mx-auto px-4 xl:px-0 py-6">
     <RouterView></RouterView>
   </main>
 </template>

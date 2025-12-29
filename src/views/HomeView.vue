@@ -167,7 +167,7 @@
     </section>
 
     <!-- PROJECT -->
-    <ProjectSection :projects="projects" />
+    <ProjectSection :projects="projects" :loading="isLoading" />
   </div>
 </template>
 
@@ -178,40 +178,29 @@ import ProjectSection from '@/components/ProjectSection.vue'
 import { Icon } from '@iconify/vue'
 import { gsap } from 'gsap'
 import { TextPlugin } from 'gsap/TextPlugin'
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
+import sanityClient from '@/sanityClient'
+import { PROJECT_LIST_QUERY } from '@/sanity/queries'
 
-const projects = [
-  {
-    title: 'Web Voting Real-time',
-    description:
-      'Aplikasi web voting real-time menggunakan Laravel dan Livewire dengan sistem token.',
-    tech: ['Laravel', 'Livewire', 'MySQL'],
-    image: '/images/projects/voting.png',
-    repo: 'https://github.com/username/web-voting',
-  },
-  {
-    title: 'Company Profile CMS',
-    description: 'CMS company profile berbasis Nuxt.js dengan SSR dan MongoDB Atlas.',
-    tech: ['Nuxt.js', 'MongoDB', 'Tailwind'],
-    image: '/images/projects/company-profile.png',
-    link: 'https://company-profile.com',
-  },
-  {
-    title: 'Digital Product Store',
-    description: 'Website penjualan produk digital menggunakan Laravel dan Inertia.js.',
-    tech: ['Laravel', 'Inertia', 'Vue'],
-    image: '/images/projects/digital-store.png',
-  },
-]
+const projects = ref()
+const isLoading = ref(true)
+
+const fetchProjects = async () => {
+  try {
+    const response = await sanityClient.fetch(PROJECT_LIST_QUERY)
+    projects.value = response
+  } catch (error) {
+    console.error('Error fetching projects:', error)
+  }
+}
 
 gsap.registerPlugin(TextPlugin)
 
 onMounted(() => {
-  // Animasi teks untuk memberi kesan mengetik
   gsap.to('.text-run', {
     repeat: -1,
     repeatDelay: 1,
-    duration: 3, // Durasi animasi (sesuaikan dengan kebutuhan)
+    duration: 3,
     text: {
       value: 'Ramdhan Nassyirah',
       delimiter: '',
@@ -220,5 +209,8 @@ onMounted(() => {
 
     yoyo: true,
   })
+
+  fetchProjects()
+  isLoading.value = false
 })
 </script>
