@@ -2,10 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
-import ToDoList from '@/views/ToDoList.vue'
 import ProjectsView from '@/views/ProjectsView.vue'
-import ContactView from '@/views/ContactView.vue'
-import ProjectDetails from '@/components/ProjectDetails.vue'
 import BlogView from '@/views/BlogView.vue'
 import NotFound from '@/views/NotFound.vue'
 import BlogDetails from '@/components/BlogDetails.vue'
@@ -47,18 +44,6 @@ const router = createRouter({
           component: ProjectsView,
           meta: { title: 'Projects | Ramdhan Nassyirah' },
         },
-        {
-          path: '/projects/:slug',
-          name: 'projectDetails',
-          component: ProjectDetails,
-          meta: { title: 'Projects Detail | Ramdhan Nassyirah' },
-        },
-        {
-          path: '/contact',
-          name: 'contact',
-          component: ContactView,
-          meta: { title: 'Contact | Ramdhan Nassyirah' },
-        },
       ],
     },
     {
@@ -66,16 +51,11 @@ const router = createRouter({
       name: 'NotFound',
       component: NotFound,
     },
-    {
-      path: '/todo',
-      name: 'todo',
-      component: ToDoList,
-    },
   ],
 })
 
 router.afterEach((to) => {
-  const defaultTitle = 'Ramdhan Nassyirah' // Default jika meta title tidak ada
+  const defaultTitle = 'Ramdhan Nassyirah'
   document.title = to.meta.title || defaultTitle
 })
 

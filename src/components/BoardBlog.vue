@@ -1,49 +1,51 @@
 <template>
   <div class="relative w-full">
-    <!-- Loading indicator -->
-    <div v-if="loading" class="absolute inset-0 flex items-center justify-center bg-white z-50">
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-live="polite"
-        aria-busy="true"
-        aria-labelledby="title-08a desc-08a"
-        class="w-6 h-6"
+    <!-- SKELETON -->
+    <div v-if="loading" class="flex h-44 w-full gap-4 overflow-x-hidden">
+      <div
+        v-for="n in skeletonCount"
+        :key="n"
+        class="flex-shrink-0 w-64 animate-pulse rounded-xl bg-white p-3"
       >
-        <title id="title-08a">Loading</title>
-        <desc id="desc-08a">Loading content</desc>
-        <path d="M7 8H3V16H7V8Z" class="fill-gray-700 animate animate-bounce" />
-        <path
-          d="M14 8H10V16H14V8Z"
-          class="fill-gray-700 animate animate-bounce [animation-delay:.2s]"
-        />
-        <path
-          d="M21 8H17V16H21V8Z"
-          class="fill-gray-700 animate animate-bounce [animation-delay:.4s]"
-        />
-      </svg>
+        <div class="h-28 w-full rounded-lg bg-gray-200"></div>
+        <div class="mt-3 h-4 w-3/4 rounded bg-gray-200"></div>
+        <div class="mt-2 h-3 w-1/2 rounded bg-gray-200"></div>
+      </div>
     </div>
 
-    <!-- Blog content -->
-    <div class="flex container h-44 w-full items-center gap-4 overflow-x-scroll">
-      <CardBlog v-for="blogs in blog" :blog="blogs" class="flex-shrink-0 mt-2" :key="blogs.id" />
+    <!-- EMPTY STATE -->
+    <div v-else-if="blogs.length === 0" class="flex h-44 items-center justify-center text-gray-500">
+      No blog available
+    </div>
+
+    <!-- BLOG LIST -->
+    <div
+      v-else
+      class="flex h-46 w-full gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-1"
+    >
+      <CardBlog
+        v-for="item in blogs"
+        :key="item._id"
+        :blog="item"
+        class="mt-2 flex-shrink-0 snap-start"
+      />
     </div>
   </div>
 </template>
-
 <script setup>
 import CardBlog from './common/Card/CardBlog.vue'
-import { ref, onBeforeMount } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import sanityClient from '../sanityClient.js'
 
-// State untuk loading dan data blog
-const loading = ref(false)
-const blog = ref([])
+const loading = ref(true)
+const blogs = ref([])
 
-// Fungsi untuk fetch data dari Sanity
+// Skeleton mengikuti jumlah blog, fallback ke 4
+const skeletonCount = computed(() => {
+  return blogs.value.length > 0 ? blogs.value.length : 2
+})
+
 const fetchBlogs = async () => {
-  loading.value = true
   try {
     const query = `*[_type == "blog"]{
       _id,
@@ -53,31 +55,15 @@ const fetchBlogs = async () => {
       author,
       _createdAt,
       slug
-    }`
-    const fetchedBlogs = await sanityClient.fetch(query)
+    } | order(_createdAt desc)`
 
-    // Mengurutkan blog berdasarkan _createdAt (waktu posting) secara menurun
-    blog.value = fetchedBlogs.sort((a, b) => new Date(b._createdAt) - new Date(a._createdAt))
+    blogs.value = await sanityClient.fetch(query)
   } catch (error) {
     console.error('Error fetching blogs:', error)
+  } finally {
+    loading.value = false
   }
-  loading.value = false
 }
 
-// Fetch data saat komponen di-mount
-onBeforeMount(() => {
-  fetchBlogs()
-})
+onMounted(fetchBlogs)
 </script>
-
-<style>
-.container {
-  overflow: auto; /* Memungkinkan scroll */
-  scrollbar-width: none; /* Untuk Firefox */
-  -ms-overflow-style: none; /* Untuk Internet Explorer dan Edge */
-}
-
-.container::-webkit-scrollbar {
-  display: none; /* Untuk Chrome, Safari, dan Edge baru */
-}
-</style>
