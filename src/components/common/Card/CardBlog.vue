@@ -1,30 +1,35 @@
 <template>
   <RouterLink
-    :to="`/blog/${blog.slug.current}`"
-    class="max-w-52 cursor-pointer hover:scale-95 transition-all duration-300 overflow-hidden"
+    :to="`/blog/${blog?.slug?.current}`"
+    class="group block w-64 flex-shrink-0 transition-all duration-300 hover:-translate-y-1"
   >
-    <img
-      :src="blog.imageUrl || 'https://via.placeholder.com/300x200'"
-      :alt="blog.title || 'Blog Image'"
-      class="w-52 h-28 rounded-lg object-cover object-top"
-    />
-    <div class="pt-1">
-      <h1 class="text-md font-semibold text-gray-800 line-clamp-1">
-        {{ blog.title || 'Untitled Blog' }}
-      </h1>
+    <!-- IMAGE -->
+    <div class="overflow-hidden rounded-xl bg-gray-100">
+      <img
+        :src="blog?.imageUrl || fallbackImage"
+        :alt="blog?.title || 'Blog Image'"
+        class="h-32 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        loading="lazy"
+      />
+    </div>
 
-      <p class="text-xs text-gray-600 line-clamp-1">
+    <!-- CONTENT -->
+    <div class="pt-2 space-y-1">
+      <h3 class="line-clamp-2 text-sm font-semibold text-gray-800">
+        {{ blog?.title || 'Untitled Blog' }}
+      </h3>
+
+      <p class="text-xs text-gray-500">
         {{ formattedDate }}
       </p>
     </div>
   </RouterLink>
 </template>
-
 <script setup>
 import { RouterLink } from 'vue-router'
-import { formatDate } from '@/utils/dateFormat' // Sesuaikan path jika berbeda
+import { computed } from 'vue'
+import { formatDate } from '@/utils/dateFormat'
 
-// Props untuk menerima data blog dari komponen induk
 const props = defineProps({
   blog: {
     type: Object,
@@ -32,6 +37,9 @@ const props = defineProps({
   },
 })
 
-// Format tanggal menggunakan fungsi formatDate
-const formattedDate = formatDate(props.blog._createdAt)
+const fallbackImage = 'https://via.placeholder.com/400x250?text=Blog'
+
+const formattedDate = computed(() =>
+  props.blog?._createdAt ? formatDate(props.blog._createdAt) : '',
+)
 </script>

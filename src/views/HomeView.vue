@@ -117,7 +117,7 @@
       </div>
 
       <!-- IMAGE -->
-      <div class="flex justify-center md:justify-end order-1 md:order-2">
+      <div class="flex justify-center md:justify-end order-1 md:order-2 drop-shadow-md">
         <img
           src="../assets/image/dun.jpeg"
           alt="Profile"
@@ -179,10 +179,6 @@ import { Icon } from '@iconify/vue'
 import { gsap } from 'gsap'
 import { TextPlugin } from 'gsap/TextPlugin'
 import { onMounted } from 'vue'
-
-const preview = () => {
-  window.open('https://ramdhannassyirah.vercel.app', '_blank')
-}
 
 const projects = [
   {

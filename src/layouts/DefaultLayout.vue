@@ -2,7 +2,7 @@
   <header>
     <Navbar />
   </header>
-  <main class="flex w-full gap-4">
+  <main>
     <div class="px-4 xl:px-0 py-8 max-w-6xl overflow-hidden mx-auto">
       <RouterView></RouterView>
     </div>
