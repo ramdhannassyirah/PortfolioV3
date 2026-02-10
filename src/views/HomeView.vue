@@ -16,9 +16,7 @@
           <li class="flex items-center gap-3 rounded-full bg-slate-100 px-4 py-1 text-sm">
             Remote worker
             <span class="relative flex h-3 w-3">
-              <span
-                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"
-              ></span>
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
               <span class="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
             </span>
           </li>
@@ -37,48 +35,23 @@
 
         <div class="flex items-center gap-4">
           <div
-            class="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full cursor-pointer bg-slate-100 hover:-translate-y-1"
-          >
+            class="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full cursor-pointer bg-slate-100 hover:-translate-y-1">
             <a href="https://github.com/ramdhannassyirah" target="_blank" rel="noopener noreferrer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-github"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-github">
                 <path
-                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-                />
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
                 <path d="M9 18c-4.51 2-5-2-7-2" />
               </svg>
             </a>
           </div>
           <div
-            class="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full cursor-pointer bg-slate-100 hover:-translate-y-1"
-          >
-            <a
-              href="http://www.instagram.com/ramdhannassyirah"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-instagram"
-              >
+            class="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full cursor-pointer bg-slate-100 hover:-translate-y-1">
+            <a href="http://www.instagram.com/ramdhannassyirah" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-instagram">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
@@ -86,28 +59,12 @@
             </a>
           </div>
           <div
-            class="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full cursor-pointer bg-slate-100 hover:-translate-y-1"
-          >
-            <a
-              href="https://id.linkedin.com/in/ramdhannassyirah"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-linkedin"
-              >
-                <path
-                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                />
+            class="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full cursor-pointer bg-slate-100 hover:-translate-y-1">
+            <a href="https://id.linkedin.com/in/ramdhannassyirahh" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-linkedin">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                 <rect width="4" height="12" x="2" y="9" />
                 <circle cx="4" cy="4" r="2" />
               </svg>
@@ -118,11 +75,8 @@
 
       <!-- IMAGE -->
       <div class="flex justify-center md:justify-end order-1 md:order-2 drop-shadow-md">
-        <img
-          src="../assets/image/dun.jpeg"
-          alt="Profile"
-          class="h-32 w-32 rounded-full object-cover ring-2 ring-black sm:h-40 sm:w-40"
-        />
+        <img src="../assets/image/dun.jpeg" alt="Profile"
+          class="h-32 w-32 rounded-full object-cover ring-2 ring-black sm:h-40 sm:w-40" />
       </div>
     </div>
 
@@ -205,24 +159,14 @@
     <!-- BLOG -->
     <section class="flex flex-col">
       <h2 class="flex items-center gap-2 text-xl font-medium">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-book-open-text"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-book-open-text">
           <path d="M12 7v14" />
           <path d="M16 12h2" />
           <path d="M16 8h2" />
           <path
-            d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
-          />
+            d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
           <path d="M6 12h2" />
           <path d="M6 8h2" />
         </svg>
