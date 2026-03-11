@@ -6,7 +6,7 @@
     <main>
       <RouterView></RouterView>
     </main>
-    <footer class="bg-black text-white py-16">
+    <footer class="bg-black text-white py-16 px-6 lg:px-16">
 
       <!-- Menu -->
       <div class="flex justify-center mb-12 px-8">
@@ -34,7 +34,7 @@
       </div>
 
       <!-- Bottom -->
-      <div class=" px-8 flex justify-between items-center text-sm">
+      <div class=" flex justify-between items-center text-sm">
 
           <!-- Copyright -->
           <p class="text-gray-400">
