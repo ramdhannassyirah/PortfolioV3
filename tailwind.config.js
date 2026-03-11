@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'momo': ['Momo Trust Sans', 'sans-serif'],
-        'sixtyfour': ['Sixtyfour', 'sans-serif'],
+        sans: ['Noto Sans', 'sans-serif'],
+        'noto-serif': ['Noto Serif', 'serif'],
       },
     },
   },
