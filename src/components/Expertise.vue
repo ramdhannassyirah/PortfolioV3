@@ -14,7 +14,7 @@
 
         <!-- Backend Card -->
         <div
-          class="group p-[1px] rounded-2xl bg-transparent hover:bg-gradient-to-r hover:from-red-500 hover:to-transparent transition duration-500">
+          class="group p-[1px] rounded-2xl bg-transparent bg-gradient-to-r from-red-500 to-transparent transition duration-500">
           <div class="rounded-2xl p-8 bg-[#0b0b0b] h-full">
 
             <!-- Icon -->
@@ -42,7 +42,7 @@
 
         <!-- Frontend Card -->
         <div
-          class="group p-[1px] rounded-2xl bg-transparent hover:bg-gradient-to-r hover:from-red-500 hover:to-transparent transition duration-500">
+          class="group p-[1px] rounded-2xl bg-transparent bg-gradient-to-l from-red-500 to-transparent transition duration-500">
           <div class="rounded-2xl p-8 bg-[#0b0b0b] h-full">
 
             <div class="w-12 h-12 flex items-center justify-center rounded-full bg-[#1a1a1a] mb-6">
