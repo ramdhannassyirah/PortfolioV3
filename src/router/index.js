@@ -3,11 +3,11 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
 import ProjectsView from '@/views/ProjectsView.vue'
-import BlogView from '@/views/BlogView.vue'
+import ArticlesView from '@/views/ArticlesView.vue'
 import NotFound from '@/views/NotFound.vue'
-import BlogDetails from '@/components/BlogDetails.vue'
 import ContactView from '@/views/ContactView.vue'
 import WorkView from '@/views/WorkView.vue'
+import ArticleDetail from '@/views/ArticleDetail.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,14 +37,14 @@ const router = createRouter({
         {
           path: '/articles',
           name: 'Articles',
-          component: BlogView,
+          component: ArticlesView,
           meta: { title: 'Articles | Ramdhan Nassyirah' },
         },
         {
-          path: '/blog/:slug',
-          name: 'blogDetails',
-          component: BlogDetails,
-          meta: { title: 'Blog Detail | Ramdhan Nassyirah' },
+          path: '/article/:slug',
+          name: 'articleDetail',
+          component: ArticleDetail,
+          meta: { title: 'Article Detail | Ramdhan Nassyirah' },
         },
         {
           path: '/projects',

@@ -1,5 +1,5 @@
 <template>
-  <div class="group h-full relative  cursor-pointer">
+  <RouterLink :to="`/article/${article.slug.current}`" class="group h-full relative  cursor-pointer">
     <div class="h-72 w-full rounded-lg overflow-hidden ">
       <img :src="article.imageUrl"
         class="h-full  group-hover:scale-105 transition-all duration-300 bg-cover bg-center  w-full" alt="">
@@ -18,17 +18,21 @@
         to create seamless digital experiences.
       </p> -->
     </div>
-  </div>
+  </RouterLink>
 </template>
 
 <script lang="ts" setup>
+import { RouterLink } from 'vue-router'
 
-defineProps({
+const props = defineProps({
   article: {
     type: Object,
     required: true
   }
 })
+
+console.log(props.article);
+
 
 
 </script>
