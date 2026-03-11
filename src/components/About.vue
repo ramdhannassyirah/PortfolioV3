@@ -11,16 +11,16 @@
     </div>
 
     <!-- Divider -->
-    <div class="w-full h-[2px] bg-gradient-to-r from-transparent via-red-500 to-transparent blur-[1px]"></div>
+    <div class="stack w-full h-[2px] bg-gradient-to-r from-transparent via-red-500 to-transparent blur-[1px]"></div>
 
-    <div class=" py-20">
+    <div class="stack py-20">
       <Stack />
     </div>
 
     <!-- Divider -->
-    <div class="w-full h-[2px] bg-gradient-to-r from-transparent via-red-500 to-transparent blur-[1px]"></div>
+    <div class="stack w-full h-[2px] bg-gradient-to-r from-transparent via-red-500 to-transparent blur-[1px]"></div>
 
-    <div class=" py-20 max-w-6xl ">
+    <div class="left py-20 max-w-6xl ">
 
       <h2 class="text-3xl md:text-4xl font-noto-serif">
         Driving sustained growth
@@ -41,6 +41,38 @@
 
 <script lang="ts" setup>
 import Stack from './Stack.vue';
+import { onMounted } from 'vue'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+
+  gsap.from(".stack", {
+    y: 100,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".stack",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  })
+
+  gsap.from(".left", {
+    x: -100,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".left",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  })
+
+})
 </script>
 
 <style></style>

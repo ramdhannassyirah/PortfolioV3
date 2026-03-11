@@ -3,7 +3,7 @@
     <div class="">
 
       <!-- Heading -->
-      <h1 class="text-5xl md:text-6xl font-noto-serif leading-tight max-w-4xl mb-16">
+      <h1 class="title-expertise text-5xl md:text-6xl font-noto-serif leading-tight max-w-4xl mb-16">
         Turning ideas into
         <span class="text-red-500 font-noto-serif">high-impact</span>
         digital experiences through proven expertise.
@@ -14,7 +14,7 @@
 
         <!-- Backend Card -->
         <div
-          class="group p-[1px] rounded-2xl bg-transparent bg-gradient-to-r from-red-500 to-transparent transition duration-500">
+          class="left-card group p-[1px] rounded-2xl bg-transparent bg-gradient-to-r from-red-500 to-transparent transition duration-500">
           <div class="rounded-2xl p-8 bg-[#0b0b0b] h-full">
 
             <!-- Icon -->
@@ -42,7 +42,7 @@
 
         <!-- Frontend Card -->
         <div
-          class="group p-[1px] rounded-2xl bg-transparent bg-gradient-to-l from-red-500 to-transparent transition duration-500">
+          class="right-card group p-[1px] rounded-2xl bg-transparent bg-gradient-to-l from-red-500 to-transparent transition duration-500">
           <div class="rounded-2xl p-8 bg-[#0b0b0b] h-full">
 
             <div class="w-12 h-12 flex items-center justify-center rounded-full bg-[#1a1a1a] mb-6">
@@ -76,6 +76,50 @@
 
 <script setup lang="ts">
 import { Icon } from '@iconify/vue';
+import { onMounted } from 'vue'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+
+  gsap.from(".title-expertise", {
+    y: 100,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".title-expertise",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  })
+
+  gsap.from(".left-card", {
+    x: -100,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".left-card",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  })
+
+  gsap.from(".right-card", {
+    x: 100,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".right-card",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  })
+
+})
 </script>
 
 <style scoped>
