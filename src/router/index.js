@@ -6,6 +6,8 @@ import ProjectsView from '@/views/ProjectsView.vue'
 import BlogView from '@/views/BlogView.vue'
 import NotFound from '@/views/NotFound.vue'
 import BlogDetails from '@/components/BlogDetails.vue'
+import ContactView from '@/views/ContactView.vue'
+import WorkView from '@/views/WorkView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,10 +29,16 @@ const router = createRouter({
           meta: { title: 'About | Ramdhan Nassyirah' },
         },
         {
-          path: '/blog',
-          name: 'blog',
+          path: '/work',
+          name: 'work',
+          component: WorkView,
+          meta: { title: 'Work | Ramdhan Nassyirah' },
+        },
+        {
+          path: '/articles',
+          name: 'Articles',
           component: BlogView,
-          meta: { title: 'Blog | Ramdhan Nassyirah' },
+          meta: { title: 'Articles | Ramdhan Nassyirah' },
         },
         {
           path: '/blog/:slug',
@@ -43,6 +51,12 @@ const router = createRouter({
           name: 'projects',
           component: ProjectsView,
           meta: { title: 'Projects | Ramdhan Nassyirah' },
+        },
+        {
+          path: '/contact',
+          name: 'contact',
+          component: ContactView,
+          meta: { title: 'Contact | Ramdhan Nassyirah' },
         },
       ],
     },

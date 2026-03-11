@@ -9,36 +9,43 @@ import BubbleMenu from '@/components/common/BubbleMenu.vue'
 
 const items = [
   {
-    label: 'home',
+    label: 'Home',
     href: '/',
     ariaLabel: 'Home',
     rotation: -8,
     hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
   },
   {
-    label: 'about',
+    label: 'About',
     href: '/about',
     ariaLabel: 'About',
     rotation: 8,
     hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
   },
   {
-    label: 'projects',
+    label: 'Work',
+    href: '/work',
+    ariaLabel: 'Work',
+    rotation: 8,
+    hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
+  },
+  {
+    label: 'Projects',
     href: '#',
     ariaLabel: 'Projects',
     rotation: 8,
     hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
   },
   {
-    label: 'blog',
-    href: '#',
-    ariaLabel: 'Blog',
+    label: 'Articles',
+    href: '/articles',
+    ariaLabel: 'Articles',
     rotation: 8,
     hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
   },
   {
-    label: 'contact',
-    href: '#',
+    label: 'Contact',
+    href: '/contact',
     ariaLabel: 'Contact',
     rotation: -8,
     hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }

@@ -18,12 +18,15 @@
           <RouterLink to="/about" exact-active-class=" border-b  border-red-500 pb-1 text-red-500"
             class="hover:text-red-500 transition">
             About</RouterLink>
-          <RouterLink to="#" class="hover:text-red-500 transition">Works</RouterLink>
-          <RouterLink to="#" class="hover:text-red-500 transition">Projects</RouterLink>
-          <RouterLink to="/blog" exact-active-class=" border-b  border-red-500 pb-1 text-red-500"
+          <RouterLink to="/work" exact-active-class=" border-b  border-red-500 pb-1 text-red-500"
+            class="hover:text-red-500 transition">Works</RouterLink>
+          <RouterLink to="/ihi" exact-active-class=" border-b  border-red-500 pb-1 text-red-500"
+            class="hover:text-red-500 transition">Projects</RouterLink>
+          <RouterLink to="/articles" exact-active-class=" border-b  border-red-500 pb-1 text-red-500"
             class="hover:text-red-500 transition">
             Articles</RouterLink>
-          <RouterLink to="#" class="hover:text-red-500 transition">Contact</RouterLink>
+          <RouterLink to="/contact" exact-active-class=" border-b  border-red-500 pb-1 text-red-500"
+            class="hover:text-red-500 transition">Contact</RouterLink>
 
         </nav>
       </div>
