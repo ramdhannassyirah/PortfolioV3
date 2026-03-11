@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <div class="absolute -bottom-4 w-full">
+    <div class="absolute -bottom-10  xl:-bottom-4 w-full">
       <CurvedLoop marquee-text="Build ✦ Innovate ✦ Scale ✦ Create ✦ Automate ✦ Deploy ✦" :speed="2" :curve-amount="210"
         direction="left" :interactive="true" />
     </div>
