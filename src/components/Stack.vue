@@ -18,5 +18,6 @@ const imageLogos = [
   { src: '/stack/postgre.png', title: 'PostgreSQL', href: 'https://www.postgresql.org' },
   { src: '/stack/mysql.png', title: 'MYSQL', href: 'https://www.postgresql.org' },
   { src: '/stack/git.png', title: 'git', href: 'https://www.postgresql.org' },
+  { src: '/stack/docker.png', title: 'docker', href: 'https://www.postgresql.org' },
 ];
 </script>
