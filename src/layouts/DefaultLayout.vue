@@ -10,7 +10,7 @@
 
       <!-- Menu -->
       <div class="flex justify-center mb-12 px-8">
-        <nav class="flex flex-wrap gap-10 text-sm tracking-widest uppercase">
+        <nav class="flex flex-wrap items-center justify-center gap-10 text-sm tracking-widest uppercase">
 
           <RouterLink to="/" exact-active-class=" border-b  border-red-500 pb-1 text-red-500 "
             class="hover:text-red-500 transition">Home
