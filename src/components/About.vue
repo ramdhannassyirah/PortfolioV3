@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-black text-white px-6 lg:px-16">
+  <section class="bg-black text-white px-6 lg:px-16 overflow-hidden">
 
     <div class=" py-20">
       <p class="md:text-3xl text-xl text-gray-300 max-w-6xl font-noto-serif lg:text-justify leading-relaxed">
