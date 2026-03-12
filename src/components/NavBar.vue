@@ -31,7 +31,7 @@ const items = [
   },
   {
     label: 'Projects',
-    href: '#',
+    href: '/projects',
     ariaLabel: 'Projects',
     rotation: 8,
     hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }

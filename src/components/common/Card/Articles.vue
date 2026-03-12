@@ -13,10 +13,7 @@
         class="text-white group-hover:text-red-500 transition-all duration-300 font-semibold leading-tight font-noto-serif">
         {{ article.title }}
       </h1>
-      <!-- <p class=" text-gray-300">
-        I build fast, secure, and scalable web applications with modern technologies
-        to create seamless digital experiences.
-      </p> -->
+
     </div>
   </RouterLink>
 </template>

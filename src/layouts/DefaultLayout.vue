@@ -20,7 +20,7 @@
             About</RouterLink>
           <RouterLink to="/work" exact-active-class=" border-b  border-red-500 pb-1 text-red-500"
             class="hover:text-red-500 transition">Works</RouterLink>
-          <RouterLink to="/ihi" exact-active-class=" border-b  border-red-500 pb-1 text-red-500"
+          <RouterLink to="/projects" exact-active-class=" border-b  border-red-500 pb-1 text-red-500"
             class="hover:text-red-500 transition">Projects</RouterLink>
           <RouterLink to="/articles" exact-active-class=" border-b  border-red-500 pb-1 text-red-500"
             class="hover:text-red-500 transition">

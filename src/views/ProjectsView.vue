@@ -24,102 +24,111 @@ onMounted(() => {
 <template>
   <section class="space-y-6">
     <!-- Header -->
-    <div>
-      <h2 class="flex items-center gap-2 text-2xl font-medium">Projects</h2>
-      <p class="mb-4 border-b-2 pb-4 text-gray-600">Beberapa project yang pernah saya kerjakan</p>
+    <div class="border-b border-gray-800">
+      <div class="max-w-7xl mx-auto px-6 py-10">
+
+        <h1 class="text-4xl text-white font-noto-serif mb-2">
+          Articles
+        </h1>
+
+        <div class="flex items-center gap-2 text-sm text-gray-400">
+          <RouterLink to="/" class="hover:text-red-500 transition">
+            Home
+          </RouterLink>
+
+          <span>/</span>
+
+          <span class="text-red-500">Articles</span>
+        </div>
+
+      </div>
     </div>
 
-    <!-- GRID -->
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- SKELETON -->
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 px-6 gap-8">
+
+      <!-- Skeleton -->
       <template v-if="isLoading">
-        <div
-          v-for="n in 6"
-          :key="n"
-          class="animate-pulse overflow-hidden rounded-2xl border bg-white shadow-sm"
-        >
-          <!-- Image skeleton -->
-          <div class="h-44 w-full bg-gray-200"></div>
+        <div v-for="i in 6" :key="i"
+          class="rounded-xl border border-gray-800 bg-[#0b0b0b] overflow-hidden animate-pulse">
 
-          <!-- Content skeleton -->
-          <div class="p-5 space-y-3">
-            <div class="h-4 w-3/4 rounded bg-gray-200"></div>
-            <div class="h-3 w-full rounded bg-gray-200"></div>
-            <div class="h-3 w-5/6 rounded bg-gray-200"></div>
+          <!-- Image Skeleton -->
+          <div class="h-52 bg-gray-800"></div>
 
-            <div class="flex gap-2 mt-3">
-              <div class="h-6 w-14 rounded bg-gray-200"></div>
-              <div class="h-6 w-16 rounded bg-gray-200"></div>
-              <div class="h-6 w-12 rounded bg-gray-200"></div>
+          <!-- Content Skeleton -->
+          <div class="p-6 space-y-4">
+
+            <div class="h-4 bg-gray-800 rounded w-3/4"></div>
+
+            <div class="space-y-2">
+              <div class="h-3 bg-gray-800 rounded"></div>
+              <div class="h-3 bg-gray-800 rounded w-5/6"></div>
+              <div class="h-3 bg-gray-800 rounded w-2/3"></div>
             </div>
 
-            <div class="flex gap-4 mt-4">
-              <div class="h-4 w-20 rounded bg-gray-200"></div>
-              <div class="h-4 w-24 rounded bg-gray-200"></div>
+            <div class="flex gap-2 pt-2">
+              <div class="h-6 w-16 bg-gray-800 rounded-full"></div>
+              <div class="h-6 w-16 bg-gray-800 rounded-full"></div>
+              <div class="h-6 w-16 bg-gray-800 rounded-full"></div>
             </div>
+
+            <div class="flex gap-3 pt-4">
+              <div class="h-8 w-24 bg-gray-800 rounded-full"></div>
+              <div class="h-8 w-24 bg-gray-800 rounded-full"></div>
+            </div>
+
           </div>
         </div>
       </template>
 
-      <!-- REAL DATA -->
-      <template v-else>
-        <div
-          v-for="(project, index) in projects"
-          :key="index"
-          class="group overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:shadow-md"
-        >
-          <!-- Image -->
-          <div class="relative h-44 w-full overflow-hidden bg-gray-100">
-            <img
-              :src="project.imageUrl"
-              :alt="project.title"
-              class="h-full w-full object-cover object-top transition duration-300 group-hover:scale-105"
-            />
-          </div>
+      <div v-else v-for="(project, index) in projects" :key="index"
+        class="group relative overflow-hidden rounded-xl border border-gray-800 bg-[#0b0b0b] transition duration-300 hover:border-red-500 hover:shadow-[0_0_25px_rgba(239,68,68,0.15)]">
 
-          <!-- Content -->
-          <div class="p-5">
-            <h3 class="font-semibold text-gray-800">
-              {{ project.title }}
-            </h3>
+        <!-- Image -->
+        <div class="relative h-52 w-full overflow-hidden">
+          <img :src="project.imageUrl" :alt="project.title"
+            class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-110" />
 
-            <p class="mt-2 text-sm text-gray-600 line-clamp-3">
-              {{ project.description }}
-            </p>
-
-            <!-- Tech Stack -->
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span
-                v-for="tech in project.technologies"
-                :key="tech"
-                class="rounded-lg bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700"
-              >
-                {{ tech }}
-              </span>
-            </div>
-
-            <!-- Actions -->
-            <div class="mt-5 flex gap-4 text-sm">
-              <a
-                v-if="project.link"
-                :href="project.link"
-                target="_blank"
-                class="border text-xs py-2 px-4 rounded-full border-black hover:bg-black hover:text-white duration-200"
-              >
-                Live Demo
-              </a>
-              <a
-                v-if="project.repo"
-                :href="project.repo"
-                target="_blank"
-                class="border text-xs py-2 px-4 rounded-full border-black bg-black text-white hover:bg-transparent hover:text-black duration-200"
-              >
-                Repository
-              </a>
-            </div>
-          </div>
+          <!-- overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80"></div>
         </div>
-      </template>
+
+        <!-- Content -->
+        <div class="p-6 space-y-3">
+
+          <h3 class="text-lg font-semibold text-white">
+            {{ project.title }}
+          </h3>
+
+          <p class="text-sm text-gray-400 line-clamp-3 leading-relaxed">
+            {{ project.description }}
+          </p>
+
+          <!-- Tech Stack -->
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span v-for="tech in project.technologies" :key="tech"
+              class="text-xs px-3 py-1 rounded-full border border-gray-700 text-gray-300 bg-[#111]">
+              {{ tech }}
+            </span>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex gap-3 pt-4">
+
+            <a v-if="project.link" :href="project.link" target="_blank"
+              class="text-xs px-4 py-2 rounded-full border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition">
+              Live Demo
+            </a>
+
+            <a v-if="project.repo" :href="project.repo" target="_blank"
+              class="text-xs px-4 py-2 rounded-full border border-gray-700 text-gray-300 hover:border-red-500 hover:text-red-500 transition">
+              Repository
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
     </div>
   </section>
 </template>

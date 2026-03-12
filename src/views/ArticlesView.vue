@@ -20,9 +20,27 @@
     </div>
   </div>
 
-  <div class="px-6 py-16 max-w-7xl mx-auto ">
+  <div class="px-6  max-w-7xl mx-auto ">
     <div class="grid md:grid-cols-3 gap-8">
-      <CardArticle v-for="i of articles" :key="i" :article='i' />
+
+      <!-- Skeleton -->
+      <template v-if="loading">
+        <div v-for="i in 3" :key="i" class="animate-pulse space-y-4">
+          <!-- Image -->
+          <div class="h-72 w-full rounded-lg bg-gray-800"></div>
+
+          <div class="space-y-3 px-2">
+            <div class="h-3 w-24 bg-gray-800 rounded"></div>
+            <div class="h-5 w-3/4 bg-gray-800 rounded"></div>
+          </div>
+        </div>
+      </template>
+
+      <!-- Articles -->
+      <template v-else>
+        <CardArticle v-for="i in articles" :key="i._id" :article="i" />
+      </template>
+
     </div>
   </div>
 </template>
