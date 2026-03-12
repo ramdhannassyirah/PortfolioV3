@@ -3,7 +3,7 @@
     <div class="">
 
       <!-- Heading -->
-      <h1 class="title-expertise text-5xl md:text-6xl font-noto-serif leading-tight max-w-4xl mb-16">
+      <h1 class="title-expertise text-4xl md:text-6xl font-noto-serif leading-tight max-w-4xl mb-16">
         Turning ideas into
         <span class="text-red-500 font-noto-serif">high-impact</span>
         digital experiences through proven expertise.

@@ -36,7 +36,7 @@
         <!-- card -->
         <div class="card w-full md:w-1/2 bg-[#0b0b0b]  rounded-xl p-6 space-y-2 opacity-0">
 
-          <h3 class="text-3xl md:text-5xl font-noto font-semibold">{{ exp.title }}</h3>
+          <h3 class="text-2xl sm:text-3xl md:text-5xl font-noto font-semibold">{{ exp.title }}</h3>
           <p class="text-red-400 text-sm">{{ exp.company }}</p>
           <p class="text-gray-400 text-sm mb-2">{{ exp.period }}</p>
 

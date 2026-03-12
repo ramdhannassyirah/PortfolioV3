@@ -1,7 +1,7 @@
 <template>
   <section class='bg-black px-6 lg:px-16 py-24 '>
     <div class="flex items-center justify-between pb-8">
-      <h1 class="text-5xl md:text-6xl font-noto-serif text-white">Latest <span class="text-red-500">Articles</span>
+      <h1 class=" text-3xl md:text-6xl font-noto-serif text-white">Latest <span class="text-red-500">Articles</span>
       </h1>
       <RouterLink to="/articles"
         class="text-gray-500 hover:text-red-400 text-sm shrink-0 transition-colors duration-300">All
