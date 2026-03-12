@@ -28,7 +28,7 @@ onMounted(() => {
       <div class="max-w-7xl mx-auto px-6 py-10">
 
         <h1 class="text-4xl text-white font-noto-serif mb-2">
-          Articles
+          Projects
         </h1>
 
         <div class="flex items-center gap-2 text-sm text-gray-400">
@@ -38,7 +38,7 @@ onMounted(() => {
 
           <span>/</span>
 
-          <span class="text-red-500">Articles</span>
+          <span class="text-red-500">Projects</span>
         </div>
 
       </div>
@@ -48,32 +48,31 @@ onMounted(() => {
 
       <!-- Skeleton -->
       <template v-if="isLoading">
-        <div v-for="i in 6" :key="i"
-          class="rounded-xl border border-gray-800 bg-[#0b0b0b] overflow-hidden animate-pulse">
+        <div v-for="i in 6" :key="i" class="rounded-lg  bg-[#0b0b0b] overflow-hidden animate-pulse">
 
           <!-- Image Skeleton -->
-          <div class="h-52 bg-gray-800"></div>
+          <div class="h-52 bg-gray-500"></div>
 
           <!-- Content Skeleton -->
           <div class="p-6 space-y-4">
 
-            <div class="h-4 bg-gray-800 rounded w-3/4"></div>
+            <div class="h-4 bg-gray-500 rounded w-3/4"></div>
 
             <div class="space-y-2">
-              <div class="h-3 bg-gray-800 rounded"></div>
-              <div class="h-3 bg-gray-800 rounded w-5/6"></div>
-              <div class="h-3 bg-gray-800 rounded w-2/3"></div>
+              <div class="h-3 bg-gray-500 rounded"></div>
+              <div class="h-3 bg-gray-500 rounded w-5/6"></div>
+              <div class="h-3 bg-gray-500 rounded w-2/3"></div>
             </div>
 
             <div class="flex gap-2 pt-2">
-              <div class="h-6 w-16 bg-gray-800 rounded-full"></div>
-              <div class="h-6 w-16 bg-gray-800 rounded-full"></div>
-              <div class="h-6 w-16 bg-gray-800 rounded-full"></div>
+              <div class="h-6 w-16 bg-gray-500 rounded-full"></div>
+              <div class="h-6 w-16 bg-gray-500 rounded-full"></div>
+              <div class="h-6 w-16 bg-gray-500 rounded-full"></div>
             </div>
 
             <div class="flex gap-3 pt-4">
-              <div class="h-8 w-24 bg-gray-800 rounded-full"></div>
-              <div class="h-8 w-24 bg-gray-800 rounded-full"></div>
+              <div class="h-8 w-24 bg-gray-500 rounded-full"></div>
+              <div class="h-8 w-24 bg-gray-500 rounded-full"></div>
             </div>
 
           </div>
@@ -81,7 +80,7 @@ onMounted(() => {
       </template>
 
       <div v-else v-for="(project, index) in projects" :key="index"
-        class="group relative overflow-hidden rounded-xl border border-gray-800 bg-[#0b0b0b] transition duration-300 hover:border-red-500 hover:shadow-[0_0_25px_rgba(239,68,68,0.15)]">
+        class="group relative overflow-hidden rounded-lg  bg-[#0b0b0b] transition duration-300 hover:border-red-500 hover:shadow-[0_0_25px_rgba(239,68,68,0.15)]">
 
         <!-- Image -->
         <div class="relative h-52 w-full overflow-hidden">

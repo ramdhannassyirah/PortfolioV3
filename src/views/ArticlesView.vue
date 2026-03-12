@@ -27,11 +27,11 @@
       <template v-if="loading">
         <div v-for="i in 3" :key="i" class="animate-pulse space-y-4">
           <!-- Image -->
-          <div class="h-72 w-full rounded-lg bg-gray-800"></div>
+          <div class="h-72 w-full rounded-lg bg-gray-500"></div>
 
           <div class="space-y-3 px-2">
-            <div class="h-3 w-24 bg-gray-800 rounded"></div>
-            <div class="h-5 w-3/4 bg-gray-800 rounded"></div>
+            <div class="h-3 w-24 bg-gray-500 rounded"></div>
+            <div class="h-5 w-3/4 bg-gray-500 rounded"></div>
           </div>
         </div>
       </template>
