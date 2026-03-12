@@ -1,15 +1,50 @@
 <template>
-  <div class="flex items-center justify-center h-screen bg-black text-white text-2xl md:text-4xl font-noto-serif">
+  <!-- Header -->
+  <div class="border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 py-10">
 
-    <TextType :text="[
-      'Website Under Development',
-      'Currently Building Something Awesome',
-      'Launching Soon 🚀'
-    ]" :typingSpeed="75" :pauseDuration="1500" :showCursor="true" cursorCharacter="|" />
+      <h1 class="text-4xl text-white font-noto-serif mb-2">
+        Articles
+      </h1>
 
+      <div class="flex items-center gap-2 text-sm text-gray-400">
+        <RouterLink to="/" class="hover:text-red-500 transition">
+          Home
+        </RouterLink>
+
+        <span>/</span>
+
+        <span class="text-red-500">Articles</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="px-6 py-16 max-w-7xl mx-auto ">
+    <div class="grid md:grid-cols-3 gap-8">
+      <CardArticle v-for="i of articles" :key="i" :article='i' />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import TextType from '@/components/common/TextType.vue'
+import CardArticle from '@/components/common/Card/Articles.vue'
+import { ref, onMounted } from 'vue'
+import sanityClient from '../sanityClient.js'
+import { BLOG_LIST_QUERY } from '@/sanity/queries'
+
+const loading = ref(true)
+const articles = ref([])
+
+const fetchBlogs = async () => {
+  try {
+    articles.value = await sanityClient.fetch(BLOG_LIST_QUERY)
+  } catch (error) {
+    console.error('Error fetching blogs:', error)
+  } finally {
+    loading.value = false
+  }
+}
+
+onMounted(fetchBlogs)
 </script>
