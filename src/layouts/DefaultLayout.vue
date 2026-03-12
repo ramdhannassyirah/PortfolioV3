@@ -37,10 +37,10 @@
       </div>
 
       <!-- Bottom -->
-      <div class=" flex justify-between items-center text-sm">
+      <div class=" flex justify-between gap-10 items-center text-sm">
 
           <!-- Copyright -->
-          <p class="text-gray-400">
+          <p class="text-gray-400 text-xs md:text-md">
             © {{ new Date().getFullYear() }}
             <span class="text-red-500 font-semibold">Ramdhan Nassyirah</span>.
             All rights reserved.
@@ -53,7 +53,7 @@
               <Icon icon="simple-icons:github" width="18" />
             </a>
 
-            <a href="https://linkedin.com/in/ramdhannassyirah" target="_blank" class="hover:text-red-500 transition">
+            <a href="https://linkedin.com/in/rmramdhannassyirah" target="_blank" class="hover:text-red-500 transition">
               <Icon icon="simple-icons:linkedin" width="18" />
             </a>
 

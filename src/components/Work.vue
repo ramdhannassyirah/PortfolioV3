@@ -71,15 +71,16 @@ const experiences = [
     company: "PT Pragma Informatika",
     period: "Feb 2025 – Feb 2026",
   },
-  {
-    title: "Full Stack Developer",
-    company: "Self Employed",
-    period: "Jul 2024 – Present",
-  },
+
   {
     title: "Web Developer",
     company: "Entercode",
     period: "Jan 2025 – Mar 2025",
+  },
+  {
+    title: "Full Stack Developer",
+    company: "Self Employed",
+    period: "Jul 2024 – Present",
   },
   {
     title: "Training Participant",

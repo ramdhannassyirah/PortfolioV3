@@ -1,10 +1,10 @@
 <template>
   <RouterLink :to="`/article/${article.slug.current}`" class="group h-full relative  cursor-pointer">
-    <div class="h-72 w-full rounded-lg overflow-hidden  ">
+    <div class="h-72 w-full rounded-lg overflow-hidden relative ">
       <img :src="article.imageUrl"
         class="h-full  group-hover:scale-105 object-cover  transition-all duration-300   w-full" alt="">
+      <div class="absolute inset-0 bg-black/40"></div>
     </div>
-    <div class="absolute inset-0 bg-black/40"></div>
     <div class="space-y-2 p-6 ">
       <p class="  text-xs tracking-[0.3em] text-red-500 font-semibold uppercase">
         Full Stack Developer
