@@ -72,7 +72,7 @@ const experiences = [
     period: "Feb 2025 – Feb 2026",
   },
   {
-    title: "Fullstack Developer",
+    title: "Full Stack Developer",
     company: "Self Employed",
     period: "Jul 2024 – Present",
   },
