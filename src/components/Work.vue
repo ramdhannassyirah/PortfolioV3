@@ -24,7 +24,7 @@
 
       <div v-for="(exp, index) in experiences" :key="index"
         class="timeline-item relative flex flex-col md:flex-row items-center mb-16"
-        :class="index % 2 ? 'md:flex-row-reverse text-end' : ''">
+        :class="index % 2 ? 'md:flex-row-reverse md:text-end' : ''">
 
         <div class="hidden md:block md:w-1/2"></div>
 
@@ -36,7 +36,7 @@
         <!-- card -->
         <div class="card w-full md:w-1/2 bg-[#0b0b0b]  rounded-xl p-6 space-y-2 opacity-0">
 
-          <h3 class="text-4xl md:text-5xl font-noto font-semibold">{{ exp.title }}</h3>
+          <h3 class="text-3xl md:text-5xl font-noto font-semibold">{{ exp.title }}</h3>
           <p class="text-red-400 text-sm">{{ exp.company }}</p>
           <p class="text-gray-400 text-sm mb-2">{{ exp.period }}</p>
 
