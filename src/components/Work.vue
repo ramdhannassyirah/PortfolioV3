@@ -85,6 +85,11 @@ const experiences = [
     title: "Training Participant",
     company: "Jabar Istimewa Digital Academy",
     period: "Apr 2024 – Jul 2024",
+  },
+  {
+    title: "Training Participant",
+    company: "1000 Startup Digital Indonesia",
+    period: "Aug 2023 – Okt 2023",
   }
 ]
 
