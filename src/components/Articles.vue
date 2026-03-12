@@ -1,8 +1,11 @@
 <template>
   <section class='bg-black px-6 lg:px-16 py-24 '>
     <div class="flex items-center justify-between pb-8">
-      <h1 class="text-5xl md:text-6xl font-noto-serif text-white">Latest Articles</h1>
-      <RouterLink to="/articles" class="text-gray-500 hover:text-red-400 transition-colors duration-300">All Articles
+      <h1 class="text-5xl md:text-6xl font-noto-serif text-white">Latest <span class="text-red-500">Articles</span>
+      </h1>
+      <RouterLink to="/articles"
+        class="text-gray-500 hover:text-red-400 text-sm shrink-0 transition-colors duration-300">All
+        Articles
       </RouterLink>
     </div>
     <div class=" w-36 h-[2px] bg-gradient-to-r from-transparent via-red-500 to-transparent blur-[1px]"></div>
