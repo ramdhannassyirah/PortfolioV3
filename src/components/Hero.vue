@@ -1,31 +1,35 @@
 <template>
-  <section class="relative w-full h-screen overflow-hidden bg-[#630719]">
+  <section class="relative w-full min-h-screen overflow-hidden bg-[#630719]">
+
     <!-- Background Image -->
-    <div class="absolute inset-0 bg-cover bg-center " style="background-image: url('/dun2.png')"></div>
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/dun2.png')"></div>
+
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black/40"></div>
-    <!-- Content -->
-    <div class="relative z-10 h-full flex items-center">
-      <div ref="hero" class="max-w-4xl mx-auto px-6 text-white text-center">
 
-        <p class="subtitle mb-4 text-sm tracking-[0.3em] text-red-400 font-semibold uppercase">
+    <!-- Content -->
+    <div class="relative z-10 flex items-center justify-center min-h-screen">
+      <div ref="hero" class="max-w-4xl px-6 text-center text-white">
+
+        <p ref="subtitle" class="mb-4 text-sm font-semibold tracking-[0.3em] text-red-400 uppercase">
           Full Stack Developer
         </p>
 
-        <h1 class="title text-4xl md:text-7xl font-semibold leading-tight mb-6 font-noto-serif">
-          Turning Ideas Into <br>
+        <h1 ref="title" class="mb-6 text-4xl font-semibold leading-tight md:text-7xl font-noto-serif">
+          Turning Ideas Into <br />
           Scalable Web Applications
         </h1>
 
-        <p class="desc text-lg md:text-xl text-gray-200 mb-10 max-w-lg mx-auto">
-          I build fast, secure, and scalable web applications with modern technologies
-          to create seamless digital experiences.
+        <p ref="desc" class="max-w-lg mx-auto mb-10 text-lg text-gray-200 md:text-xl">
+          I build fast, secure, and scalable web applications with modern
+          technologies to create seamless digital experiences.
         </p>
 
       </div>
     </div>
 
-    <div class="absolute -bottom-10  xl:-bottom-4 w-full">
+    <!-- CurvedLoop -->
+    <div class="absolute w-full -bottom-10 xl:-bottom-4 z-20">
       <CurvedLoop marquee-text="Build ✦ Innovate ✦ Scale ✦ Create ✦ Automate ✦ Deploy ✦" :speed="2" :curve-amount="210"
         direction="left" :interactive="true" />
     </div>
@@ -34,26 +38,30 @@
 </template>
 
 <script setup lang="ts">
-import CurvedLoop from './common/CurvedLoop.vue';
-import { onMounted } from 'vue';
-import gsap from 'gsap';
+import CurvedLoop from "./common/CurvedLoop.vue"
+import { onMounted, ref } from "vue"
+import gsap from "gsap"
+
+const subtitle = ref()
+const title = ref()
+const desc = ref()
 
 onMounted(() => {
 
   const tl = gsap.timeline()
 
-  tl.from(".subtitle", {
+  tl.from(subtitle.value, {
     y: 40,
     opacity: 0,
     duration: 0.8
   })
-    .from(".title", {
+    .from(title.value, {
       y: 60,
       opacity: 0,
       scale: 0.9,
       duration: 1
     })
-    .from(".desc", {
+    .from(desc.value, {
       y: 40,
       opacity: 0,
       duration: 0.8

@@ -31,9 +31,12 @@
             </p>
 
             <div class="flex flex-wrap gap-2">
-              <span class="tag">PHP</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Laravel</span>
+              <span
+                class="border hover:border-red-500 transition-all text-sm text-gray-300 rounded-full px-3 py-1">PHP</span>
+              <span
+                class="border hover:border-red-500 transition-all text-sm text-gray-300 rounded-full px-3 py-1">JavaScript</span>
+              <span
+                class="border hover:border-red-500 transition-all text-sm text-gray-300 rounded-full px-3 py-1">Laravel</span>
             </div>
 
           </div>
@@ -58,11 +61,17 @@
             </p>
 
             <div class="flex flex-wrap gap-2">
-              <span class="tag">VueJS</span>
-              <span class="tag">Nuxt</span>
-              <span class="tag">Tailwind</span>
-              <span class="tag">CSS</span>
-              <span class="tag">UI Design with Figma</span>
+              <span
+                class="border hover:border-red-500 transition-all text-sm text-gray-300 rounded-full px-3 py-1 ">VueJS</span>
+              <span
+                class="border hover:border-red-500 transition-all text-sm text-gray-300 rounded-full px-3 py-1">Nuxt</span>
+              <span
+                class="border hover:border-red-500 transition-all text-sm text-gray-300 rounded-full px-3 py-1">Tailwind</span>
+              <span
+                class="border hover:border-red-500 transition-all text-sm text-gray-300 rounded-full px-3 py-1">CSS</span>
+              <span class="border hover:border-red-500 transition-all text-sm text-gray-300 rounded-full px-3 py-1">UI
+                Design
+                with Figma</span>
             </div>
 
           </div>
@@ -121,17 +130,3 @@ onMounted(() => {
 
 })
 </script>
-
-<style scoped>
-.tag {
-  @apply text-sm px-3 py-1 rounded-full bg-[#141414] text-gray-300 border border-gray-800;
-}
-
-.tag:hover {
-  @apply border-[#ef4444] text-white;
-}
-
-h1 {
-  font-family: "Playfair Display", serif;
-}
-</style>
