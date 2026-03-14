@@ -14,5 +14,5 @@ app.use(router)
 app.mount('#app')
 
 window.onerror = function (msg, url, line, col, error) {
-  alert('Error: ' + msg + ' line:' + line)
+  document.body.innerHTML = "<h1 style='color:red'>" + msg + ' line:' + line + '</h1>'
 }
