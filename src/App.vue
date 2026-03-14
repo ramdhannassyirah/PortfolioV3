@@ -1,8 +1,6 @@
 <template>
   <div>
-    <!-- <RouterView /> -->
-
-    <p>hero</p>
+    <RouterView />
   </div>
 </template>
 <script setup>
