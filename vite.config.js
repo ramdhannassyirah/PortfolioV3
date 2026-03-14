@@ -11,6 +11,6 @@ export default defineConfig({
     },
   },
   build: {
-    target: 'es2018',
+    target: 'es2015',
   },
 })
