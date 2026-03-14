@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-black text-white py-24 px-6 lg:px-16">
+  <section class="bg-black text-white py-24 px-6 lg:px-16 overflow-hidden">
     <div class="">
 
       <!-- Heading -->
