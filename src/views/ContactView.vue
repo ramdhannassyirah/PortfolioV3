@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center h-screen bg-black text-white text-2xl md:text-4xl font-noto-serif">
+  <div class="flex items-center justify-center min-h-screen bg-black text-white text-2xl md:text-4xl font-noto-serif">
 
     <TextType :text="[
       'Website Under Development',

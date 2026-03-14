@@ -2,7 +2,9 @@
   <section class="relative w-full min-h-screen overflow-hidden bg-[#630719]">
 
     <!-- Background Image -->
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/dun2.png')"></div>
+    <div class="absolute inset-0 bg-cover bg-center">
+      <img :src="bg" alt="Hero Background" class="w-full h-full object-cover " />
+    </div>
 
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black/40"></div>
@@ -41,6 +43,7 @@
 import CurvedLoop from "./common/CurvedLoop.vue"
 import { onMounted, ref } from "vue"
 import gsap from "gsap"
+import bg from "@/assets/image/dun2.png"
 
 const subtitle = ref()
 const title = ref()
