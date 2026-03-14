@@ -12,13 +12,3 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
-
-window.onerror = function (msg, url, line, col, error) {
-  alert(`
-Message: ${msg}
-File: ${url}
-Line: ${line}
-Column: ${col}
-Error: ${error}
-  `)
-}

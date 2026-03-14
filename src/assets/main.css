@@ -1,11 +1,16 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 * {
-  font-family: 'Noto Sans', sans-serif;
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
 
 body {
+  font-family: 'Noto Sans', sans-serif;
   background-color: black;
+}
+
+@theme {
+  --font-noto-serif: 'Noto Serif', serif;
 }
