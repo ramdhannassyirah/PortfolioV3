@@ -1,5 +1,5 @@
 <template>
-  <section class="relative w-full min-h-screen overflow-hidden bg-[#630719]">
+  <section class="relative w-full min-h-screen bg-[#630719]">
 
     <!-- Background Image -->
     <div class="absolute inset-0 bg-cover bg-center">

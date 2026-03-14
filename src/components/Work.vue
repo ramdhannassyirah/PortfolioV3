@@ -148,5 +148,8 @@ onMounted(() => {
 
   })
 
+  ScrollTrigger.refresh()
+
+
 })
 </script>

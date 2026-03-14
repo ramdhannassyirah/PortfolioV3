@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-black text-white py-24 px-6 lg:px-16 overflow-hidden">
+  <section class="bg-black text-white py-24 px-6 lg:px-16">
     <div class="">
 
       <!-- Heading -->
@@ -127,6 +127,9 @@ onMounted(() => {
       toggleActions: "play none none none"
     }
   })
+
+  ScrollTrigger.refresh()
+
 
 })
 </script>
