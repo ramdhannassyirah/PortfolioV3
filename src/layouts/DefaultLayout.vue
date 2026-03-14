@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <!-- <Navbar /> -->
+      <Navbar />
     </header>
     <main>
       <RouterView></RouterView>
@@ -70,6 +70,6 @@
 </template>
 <script setup>
 import { Icon } from '@iconify/vue'
-// import Navbar from '@/components/NavBar.vue'
+import Navbar from '@/components/NavBar.vue'
 import { RouterView, RouterLink } from 'vue-router'
 </script>
