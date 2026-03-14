@@ -13,6 +13,7 @@ import {
   type VNode
 } from 'vue';
 
+
 type MenuItem = {
   label: string;
   href: string;
@@ -90,7 +91,7 @@ const props = withDefaults(defineProps<BubbleMenuProps>(), {
 const isMenuOpen = ref(false);
 const showOverlay = ref(false);
 
-const overlayRef = useTemplateRef('overlayRef');
+const overlayRef = ref<HTMLElement | null>(null);
 const bubblesRef = ref<HTMLAnchorElement[]>([]);
 const labelRefs = ref<HTMLSpanElement[]>([]);
 
@@ -319,21 +320,21 @@ watch(
             'box-border',
             'whitespace-nowrap overflow-hidden'
           ]" :style="{
-          '--item-rot': `${item.rotation ?? 0}deg`,
-          '--pill-bg': menuBg,
-          '--pill-color': menuContentColor,
-          '--hover-bg': item.hoverStyles?.bgColor || '#f3f4f6',
-          '--hover-color': item.hoverStyles?.textColor || menuContentColor,
-          background: 'var(--pill-bg)',
-          color: 'var(--pill-color)',
-          minHeight: 'var(--pill-min-h, 160px)',
-          padding: 'clamp(1.5rem, 3vw, 8rem) 0',
-          fontSize: 'clamp(1.5rem, 4vw, 4rem)',
-          fontWeight: 400,
-          lineHeight: 0,
-          willChange: 'transform',
-          height: '10px'
-        }" :ref="el => setBubbleRef(el as HTMLAnchorElement | null, idx)">
+            '--item-rot': `${item.rotation ?? 0}deg`,
+            '--pill-bg': menuBg,
+            '--pill-color': menuContentColor,
+            '--hover-bg': item.hoverStyles?.bgColor || '#f3f4f6',
+            '--hover-color': item.hoverStyles?.textColor || menuContentColor,
+            background: 'var(--pill-bg)',
+            color: 'var(--pill-color)',
+            minHeight: 'var(--pill-min-h, 160px)',
+            padding: 'clamp(1.5rem, 3vw, 8rem) 0',
+            fontSize: 'clamp(1.5rem, 4vw, 4rem)',
+            fontWeight: 400,
+            lineHeight: 0,
+            willChange: 'transform',
+            height: '10px'
+          }" :ref="el => setBubbleRef(el as HTMLAnchorElement | null, idx)">
           <span class="inline-block pill-label" :style="{
             willChange: 'transform, opacity',
             height: '1.2em',
