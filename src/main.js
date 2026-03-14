@@ -12,7 +12,3 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
-
-window.onerror = function (msg, url, line, col, error) {
-  document.body.innerHTML = "<h1 style='color:red'>" + msg + ' line:' + line + '</h1>'
-}
