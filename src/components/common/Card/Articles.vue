@@ -21,14 +21,12 @@
 <script lang="ts" setup>
 import { RouterLink } from 'vue-router'
 
-const props = defineProps({
+defineProps({
   article: {
     type: Object,
     required: true
   }
 })
-
-console.log(props.article);
 
 
 
